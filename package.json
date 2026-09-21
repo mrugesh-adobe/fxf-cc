@@ -7,7 +7,8 @@
     "lint:js": "eslint .",
     "lint:css": "stylelint \"blocks/**/*.css\" \"styles/*.css\"",
     "lint": "npm run lint:js && npm run lint:css",
-    "lint:fix": "npm run lint:js -- --fix && npm run lint:css -- --fix"
+    "lint:fix": "npm run lint:js -- --fix && npm run lint:css -- --fix",
+    "setup:skills": "npx skills add adobe/skills/plugins/aem/edge-delivery-services --all && npx skills add adobe/skills/plugins/aem/edge-delivery-services-content-ops --all && npx skills add adobe/skills/plugins/aem/project-management --all && npx skills add adobe/skills/plugins/stardust --all"
   },
   "repository": {
     "type": "git",
