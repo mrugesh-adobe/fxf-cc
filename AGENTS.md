@@ -19,4 +19,7 @@ Edge Delivery Services. Read a block first. Omissions are in the repo or known.
 - Merging `main` ships code; content publishes separately.
 - A PR without a `{branch}--fxf-customcritical--mrugesh-adobe.aem.page/{path}` link is rejected.
 - All committed files are served. Use `.hlxignore`.
-- Skills: `/plugin marketplace add adobe/skills`, then `aem-edge-delivery-services` (24 skills, incl. `docs-search`).
+- Skills: `npm run setup:skills` installs `edge-delivery-services`, `edge-delivery-services-content-ops`, `project-management`, and `stardust` from `adobe/skills` (incl. `docs-search`). Files land in `.agents/skills/`, `.claude/skills/`, and `agent/skills/` — all gitignored, machine-local, never edit or commit them. Only `skills-lock.json` is tracked; run `npm run setup:skills` (or `npx skills experimental_install`) after cloning to restore them.
+
+## Signal
+- Prefix any reply where this file's guidance changed what you did with 🦋, so AGENTS.md firing is visible.
