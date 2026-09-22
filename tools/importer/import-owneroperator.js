@@ -37,11 +37,19 @@ const PAGE_TEMPLATE = {
     },
     {
       id: 'rc2',
-      name: 'content',
-      selector: ['#content'],
+      name: 'sidebar',
+      selector: ['#col-left'],
+      style: null,
+      blocks: [],
+      defaultContent: ['#col-left #nav-local', '#col-left .basic-icon-single'],
+    },
+    {
+      id: 'rc3',
+      name: 'main',
+      selector: ['#col-main'],
       style: null,
       blocks: ['cards-feature'],
-      defaultContent: ['#content h1', '#content #col-main > p'],
+      defaultContent: ['#col-main h1', '#col-main > p'],
     },
   ],
 };
@@ -136,6 +144,28 @@ export default {
     WebImporter.rules.createMetadata(main, document);
     WebImporter.rules.transformBackgroundImages(main, document);
     WebImporter.rules.adjustImageUrls(main, url, params.originalURL);
+
+    // 5b. Add a Template metadata row so the published page gets a
+    // `body.owneroperator` class (decorateTemplateAndTheme). This scopes the
+    // sidebar + main two-column grid CSS to this template only. This vendored
+    // boilerplate does not process Section Metadata, so a body template class
+    // is the reliable page-level styling hook. createMetadata emits a <table>
+    // whose header cell reads "Metadata".
+    const metadataTable = [...main.querySelectorAll('table')].find((t) => {
+      const th = t.querySelector('tr:first-child th');
+      return th && /^metadata$/i.test(th.textContent.trim());
+    });
+    if (metadataTable) {
+      const tr = document.createElement('tr');
+      const keyCell = document.createElement('td');
+      // lowercase key so getMetadata('template') matches both the local
+      // aem-up server (case-sensitive) and the pipeline (which lowercases).
+      keyCell.textContent = 'template';
+      const valCell = document.createElement('td');
+      valCell.textContent = PAGE_TEMPLATE.name;
+      tr.append(keyCell, valCell);
+      metadataTable.appendChild(tr);
+    }
 
     // 6. sanitized path (map root URL to /index to avoid empty-path crash)
     const rawPath = new URL(params.originalURL).pathname

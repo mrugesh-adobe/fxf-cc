@@ -322,33 +322,134 @@ main > .section:first-of-type {
 
 /* Owner Operators content: sidebar (local nav + info) + main column.
    Matches source #col-left (245px) + #col-main (735px) in a 990px container.
-   Keyed off the sidebar-bearing section so it works with or without
-   section-metadata class processing. */
+
+   Because a multi-level nested nav list cannot survive inside a block-table
+   cell in the publishing pipeline, the sidebar is imported as its OWN section
+   (plain default content) alongside the main-column section. The page carries
+   a `template: owneroperator` metadata value, which decorateTemplateAndTheme
+   turns into `body.owneroperator` — the reliable page-scoped styling hook
+   (this vendored boilerplate does not process Section Metadata).
+
+   Section order under <main>: [0] hero (full width), [1] sidebar, [2] main. */
 @media (width >= 900px) {
-  main .section.page-sidebar-container {
+  body.owneroperator main {
     display: grid;
-    grid-template-columns: 245px 1fr;
+    grid-template-columns: 245px minmax(0, 1fr);
     column-gap: 30px;
     align-items: start;
     max-width: 990px;
     margin-inline: auto;
   }
 
-  /* sidebar spans the left column, full height of the section */
-  main .section.page-sidebar-container .page-sidebar-wrapper {
-    grid-column: 1;
-    grid-row: 1 / span 99;
-    max-width: none;
-    padding: 0;
+  /* hero banner spans both columns */
+  body.owneroperator main > .section.hero-banner-container {
+    grid-column: 1 / -1;
+    margin: 0 0 24px;
   }
 
-  /* everything else (heading, intro, cards) stacks in the right column */
-  main .section.page-sidebar-container > div:not(.page-sidebar-wrapper) {
+  /* sidebar section → left column */
+  body.owneroperator main > .section.hero-banner-container + .section {
+    grid-column: 1;
+    margin: 0;
+  }
+
+  /* main content section (heading + intro + cards) → right column */
+  body.owneroperator main > .section.cards-feature-container {
     grid-column: 2;
+    margin: 0;
+  }
+
+  /* neutralise the default section max-width/padding inside the grid */
+  body.owneroperator main > .section > div {
     max-width: none;
     padding: 0;
   }
 }
+
+/* ── Sidebar (local "in this section" nav + "Additional information") ──
+   Scoped to the sidebar section: the first .section after the hero. */
+
+/* stylelint-disable no-descending-specificity -- nested nav + info groups intentionally ordered by DOM, not specificity */
+body.owneroperator main > .section.hero-banner-container + .section {
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+/* local nav list */
+body.owneroperator main > .section.hero-banner-container + .section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body.owneroperator main > .section.hero-banner-container + .section > div > ul > li {
+  border-top: 1px solid rgb(0 0 0 / 12%);
+  padding: 8px 0;
+}
+
+body.owneroperator main > .section.hero-banner-container + .section > div > ul > li:first-child {
+  border-top: 0;
+}
+
+body.owneroperator main > .section.hero-banner-container + .section a:any-link {
+  color: var(--link-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+body.owneroperator main > .section.hero-banner-container + .section a:hover {
+  text-decoration: underline;
+}
+
+/* nested sub-lists — progressively indented, lighter weight */
+body.owneroperator main > .section.hero-banner-container + .section ul ul {
+  margin: 6px 0 0;
+  padding-left: 14px;
+}
+
+body.owneroperator main > .section.hero-banner-container + .section ul ul li {
+  padding: 4px 0;
+}
+
+body.owneroperator main > .section.hero-banner-container + .section ul ul a:any-link {
+  font-weight: 400;
+}
+
+body.owneroperator main > .section.hero-banner-container + .section ul ul ul a:any-link {
+  color: var(--text-color);
+}
+
+/* the nav's link labels arrive wrapped in <p> (EDS default content) — flatten */
+body.owneroperator main > .section.hero-banner-container + .section li > p {
+  margin: 0;
+}
+
+/* "Additional information" callout heading with info icon */
+body.owneroperator main > .section.hero-banner-container + .section h2 {
+  margin: 24px 0 8px;
+  padding-left: 26px;
+  background: url('/icons/icon-info.png') no-repeat left center;
+  background-size: 20px 20px;
+  font-size: var(--heading-font-size-s);
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+/* the info callout's link list uses bullets */
+body.owneroperator main > .section.hero-banner-container + .section h2 + ul {
+  list-style: disc;
+  margin: 0;
+  padding-left: 18px;
+  font-weight: 700;
+}
+
+body.owneroperator main > .section.hero-banner-container + .section h2 + ul li {
+  margin: 4px 0;
+  border-top: 0;
+  padding: 0;
+}
+
+/* stylelint-enable no-descending-specificity */
 
 /* section metadata */
 main .section.light,

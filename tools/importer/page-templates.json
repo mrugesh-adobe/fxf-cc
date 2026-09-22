@@ -42,17 +42,30 @@
         },
         {
           "id": "rc2",
-          "name": "content",
+          "name": "sidebar",
           "selector": [
-            "#content"
+            "#col-left"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "#col-left #nav-local",
+            "#col-left .basic-icon-single"
+          ]
+        },
+        {
+          "id": "rc3",
+          "name": "main",
+          "selector": [
+            "#col-main"
           ],
           "style": null,
           "blocks": [
             "cards-feature"
           ],
           "defaultContent": [
-            "#content h1",
-            "#content #col-main > p"
+            "#col-main h1",
+            "#col-main > p"
           ]
         }
       ]

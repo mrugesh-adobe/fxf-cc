@@ -5,14 +5,19 @@
  * Transformer: FedEx Custom Critical (customcritical.fedex.com) site-wide cleanup.
  *
  * Removes non-authorable global chrome so only the main page content
- * (banner + main column) is imported. The global header and footer are
- * already migrated separately; the left sidebar (#col-left) is page-chrome
- * navigation, not authorable content.
+ * (banner + sidebar + main column) is imported. The global header and footer
+ * are already migrated separately.
+ *
+ * The left column (#col-left: local "in this section" nav + an "Additional
+ * information" callout) IS authorable page content and is kept — it is imported
+ * as its own section alongside #col-main so the multi-level nav survives the
+ * publishing pipeline as default content (a nested list cannot live inside a
+ * block-table cell). Only its decorative inline icon <img> is dropped.
  *
  * All selectors verified against migration-work/cleaned.html:
  *  - #fxg-header-container / header.fxg-header  -> global site header (lines 11-165)
  *  - #global_footer_reference / footer.fxg-footer -> global site footer (lines 310-497)
- *  - #col-left                                   -> left sidebar local nav + "additional info" (lines 192-252)
+ *  - #col-left img.inline-icon                   -> decorative info icon (line ~245)
  */
 
 const TransformHook = { beforeTransform: 'beforeTransform', afterTransform: 'afterTransform' };
@@ -25,17 +30,30 @@ export default function transform(hookName, element, payload) {
 
   if (hookName === TransformHook.afterTransform) {
     // Remove non-authorable global chrome. Selectors from captured DOM.
+    // NOTE: #col-left is intentionally KEPT — it is authorable page content
+    // (local nav + "Additional information") imported as its own section.
     WebImporter.DOMUtils.remove(element, [
       '#fxg-header-container', // global header wrapper (verified cleaned.html:11)
       'header.fxg-header',     // header element inside wrapper (verified cleaned.html:12)
       '#global_footer_reference', // global footer wrapper (verified cleaned.html:310)
       'footer.fxg-footer',     // footer element inside wrapper (verified cleaned.html:313)
-      '#col-left',             // left sidebar page-chrome nav (verified cleaned.html:192)
+      '#col-left img.inline-icon', // decorative info-callout icon (styled via CSS instead)
       'iframe',                // runtime-injected tracking iframes (e.g. Adobe ID sync)
     ]);
 
     // Remove runtime-injected Adobe Audience Manager / demdex ID-sync links that
     // are not present in the captured DOM but leak in during live import.
     element.querySelectorAll('a[href*="demdex.net"], a[href*="dpm.demdex"]').forEach((a) => a.remove());
+
+    // Strip the SSI directive comment text that leaks in as a text node inside
+    // #col-left ("[an error occurred while processing this directive]").
+    const colLeft = element.querySelector('#col-left');
+    if (colLeft) {
+      colLeft.childNodes.forEach((node) => {
+        if (node.nodeType === 3 && /processing this directive/i.test(node.textContent)) {
+          node.remove();
+        }
+      });
+    }
   }
 }
