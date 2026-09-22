@@ -29,6 +29,29 @@
   margin-top: 0;
 }
 
+/* brand: heading + CTA styling to match source (FedEx purple, bold) */
+.cards-feature .cards-feature-card-body h2 {
+  margin: 0 0 10px;
+  font-size: var(--heading-font-size-s);
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.cards-feature .cards-feature-card-body p {
+  margin: 0 0 10px;
+  color: var(--text-color);
+}
+
+.cards-feature .cards-feature-card-body a:any-link {
+  color: var(--link-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cards-feature .cards-feature-card-body a:hover {
+  text-decoration: underline;
+}
+
 @media (width >= 900px) {
   .cards-feature > ul {
     grid-template-columns: repeat(3, 1fr);
