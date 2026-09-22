@@ -18,3 +18,9 @@ agent/skills/*
 # Ensure these files are tracked
 !CLAUDE.md
 !AGENTS.md
+migration-work/navigation-validation/
+migration-work/footer-validation/
+
+# importer build/run artifacts (regenerable)
+tools/importer/*.bundle.js
+tools/importer/reports/

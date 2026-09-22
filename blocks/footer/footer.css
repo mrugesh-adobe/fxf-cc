@@ -1,20 +1,190 @@
+/* FedEx Custom Critical footer */
+
+:root {
+  --fxcc-footer-bg: rgb(250 250 250);
+  --fxcc-footer-text: rgb(89 89 91);
+  --fxcc-footer-heading: rgb(77 20 140);
+  --fxcc-footer-purple: rgb(77 20 140);
+}
+
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--fxcc-footer-bg);
+  font-family: roboto, var(--body-font-family, sans-serif);
+  font-size: 12px;
+  color: var(--fxcc-footer-text);
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer .footer-content {
+  padding-top: 30px;
 }
 
-footer .footer p {
+footer .footer-content p {
   margin: 0;
 }
 
+footer .footer-content a:any-link {
+  color: var(--fxcc-footer-text);
+  text-decoration: none;
+}
+
+footer .footer-content a:hover {
+  text-decoration: underline;
+}
+
+/* content wrappers centered in a 970px container (mobile: edge padding) */
+footer .footer-primary,
+footer .footer-social {
+  box-sizing: border-box;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* primary link columns */
+footer .footer-primary h2 {
+  margin: 0 0 12px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  color: var(--fxcc-footer-heading);
+}
+
+footer .footer-primary ul {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+footer .footer-primary li {
+  margin: 0 0 10px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer-primary a {
+  font-size: 12px;
+}
+
+/* social section */
+footer .footer-social {
+  padding-bottom: 30px;
+  border-top: 1px solid rgb(89 89 91 / 50%);
+  padding-top: 24px;
+}
+
+footer .footer-social h2 {
+  margin: 0 0 12px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  color: var(--fxcc-footer-heading);
+}
+
+footer .footer-social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+footer .footer-social li {
+  margin: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer-social a {
+  display: inline-flex;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+
+footer .footer-social a:hover {
+  opacity: 0.7;
+}
+
+footer .footer-social img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+/* copyright bar */
+footer .footer-copyright {
+  background-color: var(--fxcc-footer-purple);
+  color: #fff;
+  padding: 19px 15px;
+  text-align: center;
+}
+
+footer .footer-copyright p {
+  margin: 0;
+}
+
+footer .footer-copyright a:any-link {
+  color: #fff;
+}
+
+footer .footer-copyright ul {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 0;
+}
+
+footer .footer-copyright li {
+  padding: 0 12px;
+  border-right: 1px solid rgb(255 255 255 / 40%);
+  line-height: 1;
+}
+
+footer .footer-copyright li:last-child {
+  border-right: 0;
+}
+
+/* ===== desktop ===== */
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer-primary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 240px));
+    column-gap: 48px;
+    grid-auto-flow: column;
+    grid-template-rows: auto 1fr;
+    align-content: start;
+  }
+
+  footer .footer-primary h2 {
+    margin-top: 0;
+  }
+
+  footer .footer-social {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  footer .footer-social h2 {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  footer .footer-copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 19px max(15px, calc((100% - 970px) / 2));
+    text-align: left;
+  }
+
+  footer .footer-copyright ul {
+    margin: 0;
+    justify-content: flex-end;
   }
 }

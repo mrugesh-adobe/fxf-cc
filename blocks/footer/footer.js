@@ -1,20 +1,45 @@
-import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
+// Metadata-independent dual-fetch: /content first (localhost / aem up), then root (DA/EDS prod)
+async function fetchFooter() {
+  let resp = await fetch('/content/footer.plain.html');
+  if (!resp.ok) resp = await fetch('/footer.plain.html');
+  if (!resp.ok) return null;
+  const html = await resp.text();
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  return tmp;
+}
 
 /**
  * loads and decorates the footer
  * @param {Element} block The footer block element
  */
 export default async function decorate(block) {
-  // load footer as fragment
-  const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
-  const fragment = await loadFragment(footerPath);
-
-  // decorate footer DOM
+  const fragment = await fetchFooter();
   block.textContent = '';
+
   const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
+  footer.className = 'footer-content';
+
+  const sections = fragment ? [...fragment.children] : [];
+  const [primary, social, copyright] = sections;
+
+  // section 0 — primary link columns
+  if (primary) {
+    primary.classList.add('footer-primary');
+    footer.append(primary);
+  }
+
+  // section 1 — social icons
+  if (social) {
+    social.classList.add('footer-social');
+    footer.append(social);
+  }
+
+  // section 2 — copyright bar (legal links become a pipe-separated inline list)
+  if (copyright) {
+    copyright.classList.add('footer-copyright');
+    footer.append(copyright);
+  }
 
   block.append(footer);
 }
