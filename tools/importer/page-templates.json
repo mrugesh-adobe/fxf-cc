@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "owneroperator",
+      "urls": [
+        "https://customcritical.fedex.com/us/owneroperator/default.shtml"
+      ],
+      "representativeUrl": "https://customcritical.fedex.com/us/owneroperator/default.shtml",
+      "description": "Owner Operators content page: full-width banner, two-column content (sidebar default content + main column feature cards).",
+      "urlPattern": "/us/owneroperator/*",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            "#banner-img",
+            "#banner .fx_clearfix #banner-img"
+          ]
+        },
+        {
+          "name": "cards-feature",
+          "instances": [
+            ".basic-columns",
+            "#content .block.basic-columns"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "banner",
+          "selector": [
+            "#banner"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "content",
+          "selector": [
+            "#content"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-feature"
+          ],
+          "defaultContent": [
+            "#content h1",
+            "#content #col-main > p"
+          ]
+        }
+      ]
+    }
+  ]
+}

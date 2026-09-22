@@ -1,0 +1,10 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "Full-width, edge-to-edge banner image spanning the content area; no overlaid headline, subheading, or CTA. Image renders at natural aspect ratio, full width.",
+  "contentPattern": "A single image (picture) as the only cell. Image-only hero.",
+  "usage": "Use for a standalone full-bleed banner/hero image at the top of a page where no overlaid text or call-to-action is needed.",
+  "options": [],
+  "memberVariantIds": ["hero-banner"]
+}

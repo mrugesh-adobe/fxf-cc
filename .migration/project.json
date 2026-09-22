@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "fxf-customcritical": {
+      "previewOrg": "mrugesh-adobe",
+      "previewSite": "fxf-customcritical",
+      "contentHostUrl": "https://content.da.live/mrugesh-adobe/fxf-customcritical/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

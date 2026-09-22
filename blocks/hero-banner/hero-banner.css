@@ -1,0 +1,39 @@
+/* hero-banner — full-bleed banner image, edge-to-edge, no overlaid content.
+   Structural only: layout topology, no brand color/typography tokens. */
+
+.hero-banner-container .hero-banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-banner {
+  position: relative;
+  padding: 0;
+}
+
+.hero-banner picture {
+  display: block;
+  width: 100%;
+}
+
+.hero-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* if an author supplies text but no image, keep it readable (no overlay) */
+.hero-banner.no-image {
+  padding: 40px 24px;
+}
+
+.hero-banner.no-image * {
+  color: var(--text-color);
+}
+
+@media (width >= 900px) {
+  .hero-banner.no-image {
+    padding: 40px 32px;
+  }
+}
