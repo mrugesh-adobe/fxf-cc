@@ -320,6 +320,36 @@ main > .section:first-of-type {
   }
 }
 
+/* Owner Operators content: sidebar (local nav + info) + main column.
+   Matches source #col-left (245px) + #col-main (735px) in a 990px container.
+   Keyed off the sidebar-bearing section so it works with or without
+   section-metadata class processing. */
+@media (width >= 900px) {
+  main .section.page-sidebar-container {
+    display: grid;
+    grid-template-columns: 245px 1fr;
+    column-gap: 30px;
+    align-items: start;
+    max-width: 990px;
+    margin-inline: auto;
+  }
+
+  /* sidebar spans the left column, full height of the section */
+  main .section.page-sidebar-container .page-sidebar-wrapper {
+    grid-column: 1;
+    grid-row: 1 / span 99;
+    max-width: none;
+    padding: 0;
+  }
+
+  /* everything else (heading, intro, cards) stacks in the right column */
+  main .section.page-sidebar-container > div:not(.page-sidebar-wrapper) {
+    grid-column: 2;
+    max-width: none;
+    padding: 0;
+  }
+}
+
 /* section metadata */
 main .section.light,
 main .section.highlight {
