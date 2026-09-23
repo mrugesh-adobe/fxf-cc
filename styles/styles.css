@@ -332,7 +332,7 @@ main > .section:first-of-type {
 
    Section order under <main>: [0] hero (full width), [1] sidebar, [2] main. */
 @media (width >= 900px) {
-  body.owneroperator main {
+  body[class*="owneroperator"] main {
     display: grid;
     grid-template-columns: 245px minmax(0, 1fr);
     column-gap: 30px;
@@ -342,25 +342,27 @@ main > .section:first-of-type {
   }
 
   /* hero banner spans both columns */
-  body.owneroperator main > .section.hero-banner-container {
+  body[class*="owneroperator"] main > .section.hero-banner-container {
     grid-column: 1 / -1;
     margin: 0 0 24px;
   }
 
   /* sidebar section → left column */
-  body.owneroperator main > .section.hero-banner-container + .section {
+  body[class*="owneroperator"] main > .section.hero-banner-container + .section {
     grid-column: 1;
     margin: 0;
   }
 
-  /* main content section (heading + intro + cards) → right column */
-  body.owneroperator main > .section.cards-feature-container {
+  /* main content section (heading + intro + cards / tabs / accordion) → right column */
+  body[class*="owneroperator"] main > .section.cards-feature-container,
+  body[class*="owneroperator"] main > .section.tabs-container,
+  body[class*="owneroperator"] main > .section.accordion-container {
     grid-column: 2;
     margin: 0;
   }
 
   /* neutralise the default section max-width/padding inside the grid */
-  body.owneroperator main > .section > div {
+  body[class*="owneroperator"] main > .section > div {
     max-width: none;
     padding: 0;
   }
@@ -370,62 +372,62 @@ main > .section:first-of-type {
    Scoped to the sidebar section: the first .section after the hero. */
 
 /* stylelint-disable no-descending-specificity -- nested nav + info groups intentionally ordered by DOM, not specificity */
-body.owneroperator main > .section.hero-banner-container + .section {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section {
   font-size: 13px;
   color: var(--text-color);
 }
 
 /* local nav list */
-body.owneroperator main > .section.hero-banner-container + .section ul {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-body.owneroperator main > .section.hero-banner-container + .section > div > ul > li {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section > div > ul > li {
   border-top: 1px solid rgb(0 0 0 / 12%);
   padding: 8px 0;
 }
 
-body.owneroperator main > .section.hero-banner-container + .section > div > ul > li:first-child {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section > div > ul > li:first-child {
   border-top: 0;
 }
 
-body.owneroperator main > .section.hero-banner-container + .section a:any-link {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section a:any-link {
   color: var(--link-color);
   font-weight: 700;
   text-decoration: none;
 }
 
-body.owneroperator main > .section.hero-banner-container + .section a:hover {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section a:hover {
   text-decoration: underline;
 }
 
 /* nested sub-lists — progressively indented, lighter weight */
-body.owneroperator main > .section.hero-banner-container + .section ul ul {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section ul ul {
   margin: 6px 0 0;
   padding-left: 14px;
 }
 
-body.owneroperator main > .section.hero-banner-container + .section ul ul li {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section ul ul li {
   padding: 4px 0;
 }
 
-body.owneroperator main > .section.hero-banner-container + .section ul ul a:any-link {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section ul ul a:any-link {
   font-weight: 400;
 }
 
-body.owneroperator main > .section.hero-banner-container + .section ul ul ul a:any-link {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section ul ul ul a:any-link {
   color: var(--text-color);
 }
 
 /* the nav's link labels arrive wrapped in <p> (EDS default content) — flatten */
-body.owneroperator main > .section.hero-banner-container + .section li > p {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section li > p {
   margin: 0;
 }
 
 /* "Additional information" callout heading with info icon */
-body.owneroperator main > .section.hero-banner-container + .section h2 {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section h2 {
   margin: 24px 0 8px;
   padding-left: 26px;
   background: url('/icons/icon-info.png') no-repeat left center;
@@ -436,14 +438,14 @@ body.owneroperator main > .section.hero-banner-container + .section h2 {
 }
 
 /* the info callout's link list uses bullets */
-body.owneroperator main > .section.hero-banner-container + .section h2 + ul {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section h2 + ul {
   list-style: disc;
   margin: 0;
   padding-left: 18px;
   font-weight: 700;
 }
 
-body.owneroperator main > .section.hero-banner-container + .section h2 + ul li {
+body[class*="owneroperator"] main > .section.hero-banner-container + .section h2 + ul li {
   margin: 4px 0;
   border-top: 0;
   padding: 0;

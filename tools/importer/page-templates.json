@@ -4,13 +4,89 @@
   },
   "templates": [
     {
+      "name": "owneroperator-2",
+      "urls": [
+        "https://customcritical.fedex.com/us/owneroperator/advantages/default.shtml",
+        "https://customcritical.fedex.com/us/owneroperator/faqs/default.shtml",
+        "https://customcritical.fedex.com/us/owneroperator/overview/default.shtml"
+      ],
+      "representativeUrl": "https://customcritical.fedex.com/us/owneroperator/advantages/default.shtml",
+      "description": "Owner Operators sub-pages (overview, advantages, faqs): full-width banner, left sidebar (local nav + additional-info + optional extranet callout) and a main column whose content is an in-page tabs block (overview/advantages) or an FAQ accordion (faqs).",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            "#banner-img",
+            "#banner .fx_clearfix #banner-img"
+          ]
+        },
+        {
+          "name": "tabs",
+          "instances": [
+            "#col-main .block.tabs",
+            "#col-main #tabs.block.tabs"
+          ]
+        },
+        {
+          "name": "accordion",
+          "instances": [
+            "#col-main .block.faq"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "rc1",
+          "name": "banner",
+          "selector": [
+            "#banner"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "rc2",
+          "name": "sidebar",
+          "selector": [
+            "#col-left"
+          ],
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "#col-left #nav-local",
+            "#col-left .basic-icon-single",
+            "#col-left .sag-wrap"
+          ]
+        },
+        {
+          "id": "rc3",
+          "name": "main",
+          "selector": [
+            "#col-main"
+          ],
+          "style": null,
+          "blocks": [
+            "tabs",
+            "accordion"
+          ],
+          "defaultContent": [
+            "#col-main h1",
+            "#col-main > .copy > p:first-of-type"
+          ]
+        }
+      ],
+      "urlPattern": "/us/owneroperator/*"
+    },
+    {
       "name": "owneroperator",
       "urls": [
         "https://customcritical.fedex.com/us/owneroperator/default.shtml"
       ],
       "representativeUrl": "https://customcritical.fedex.com/us/owneroperator/default.shtml",
-      "description": "Owner Operators content page: full-width banner, two-column content (sidebar default content + main column feature cards).",
-      "urlPattern": "/us/owneroperator/*",
+      "description": "To be named in naming step",
       "blocks": [
         {
           "name": "hero-banner",
@@ -68,7 +144,8 @@
             "#col-main > p"
           ]
         }
-      ]
+      ],
+      "urlPattern": "/us/owneroperator/*"
     }
   ]
 }
