@@ -8,7 +8,11 @@
       "urls": [
         "https://customcritical.fedex.com/us/owneroperator/advantages/default.shtml",
         "https://customcritical.fedex.com/us/owneroperator/faqs/default.shtml",
-        "https://customcritical.fedex.com/us/owneroperator/overview/default.shtml"
+        "https://customcritical.fedex.com/us/owneroperator/overview/default.shtml",
+        "https://customcritical.fedex.com/us/owneroperator/quals/default.shtml",
+        "https://customcritical.fedex.com/us/owneroperator/quals/smstrtrk.shtml",
+        "https://customcritical.fedex.com/us/owneroperator/quals/lgstrtrk.shtml",
+        "https://customcritical.fedex.com/us/owneroperator/quals/tractortrailer.shtml"
       ],
       "representativeUrl": "https://customcritical.fedex.com/us/owneroperator/advantages/default.shtml",
       "description": "Owner Operators sub-pages (overview, advantages, faqs): full-width banner, left sidebar (local nav + additional-info + optional extranet callout) and a main column whose content is an in-page tabs block (overview/advantages) or an FAQ accordion (faqs).",

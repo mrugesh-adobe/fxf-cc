@@ -18,6 +18,10 @@ const PAGE_TEMPLATE = {
     'https://customcritical.fedex.com/us/owneroperator/overview/default.shtml',
     'https://customcritical.fedex.com/us/owneroperator/advantages/default.shtml',
     'https://customcritical.fedex.com/us/owneroperator/faqs/default.shtml',
+    'https://customcritical.fedex.com/us/owneroperator/quals/default.shtml',
+    'https://customcritical.fedex.com/us/owneroperator/quals/smstrtrk.shtml',
+    'https://customcritical.fedex.com/us/owneroperator/quals/lgstrtrk.shtml',
+    'https://customcritical.fedex.com/us/owneroperator/quals/tractortrailer.shtml',
   ],
   blocks: [
     {
