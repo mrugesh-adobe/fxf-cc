@@ -1,0 +1,78 @@
+/* tabs — FedEx Custom Critical brand styling.
+   Horizontal tab strip over a bordered content panel; the selected tab is
+   filled with the brand purple, inactive tabs are light grey. Only the
+   selected panel is shown. Structural reference: EDS Block Collection `tabs`. */
+
+.tabs .tabs-list {
+  display: flex;
+  gap: 2px;
+  max-width: 100%;
+  overflow-x: auto;
+  border-bottom: 2px solid var(--fxcc-purple);
+}
+
+.tabs .tabs-list button {
+  flex: 0 0 max-content;
+  margin: 0;
+  border: 1px solid rgb(0 0 0 / 12%);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  padding: 0.6em 1.25em;
+  background-color: var(--section-light-color, rgb(250 250 250));
+  color: var(--fxcc-purple);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s, 16px);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.tabs .tabs-list button p {
+  margin: 0;
+}
+
+.tabs .tabs-list button:hover {
+  background-color: rgb(77 20 140 / 8%);
+}
+
+.tabs .tabs-list button[aria-selected='true'] {
+  background-color: var(--fxcc-purple);
+  border-color: var(--fxcc-purple);
+  color: #fff;
+  cursor: initial;
+}
+
+.tabs .tabs-panel {
+  padding: 24px 0;
+  color: var(--text-color);
+}
+
+.tabs .tabs-panel[aria-hidden='true'] {
+  display: none;
+}
+
+/* stylelint-disable-next-line no-descending-specificity -- distinct context (panel vs tab-strip button), not a real cascade conflict */
+.tabs .tabs-panel p {
+  margin: 0 0 1em;
+}
+
+/* bold lead-in subheadings inside a panel (e.g. "Annual Elite Fleet Award") */
+.tabs .tabs-panel p strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--heading-color);
+  font-size: var(--heading-font-size-s, 18px);
+}
+
+.tabs .tabs-panel a:any-link {
+  color: var(--link-color);
+  font-weight: 700;
+}
+
+.tabs .tabs-panel a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}

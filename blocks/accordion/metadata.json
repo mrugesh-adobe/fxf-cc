@@ -1,0 +1,10 @@
+{
+  "variantName": "accordion",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "A stack of bordered, collapsible items. Each item shows a question label with a chevron marker; clicking expands to reveal the answer body. The chevron rotates when open.",
+  "contentPattern": "One row per question/answer pair. Cell 1 = question label. Cell 2 = answer body (paragraphs, lists, links). Category headings are authored as default-content headings preceding each accordion group.",
+  "usage": "FAQ accordion migrated from the FedEx Custom Critical Owner Operators FAQs page (category-grouped question/answer pairs).",
+  "options": [],
+  "memberVariantIds": ["accordion"]
+}

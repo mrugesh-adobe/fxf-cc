@@ -1,0 +1,10 @@
+{
+  "variantName": "tabs",
+  "baseBlock": "tabs",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": "A horizontal strip of tab buttons above a bordered content panel. The selected tab is highlighted and its panel is shown; other panels are hidden. Scrolls horizontally on narrow viewports.",
+  "contentPattern": "One row per tab. Cell 1 = tab label (short text). Cell 2 = tab panel content (heading, paragraphs with bold lead-in subheadings, descriptions, and optional bullet lists / links).",
+  "usage": "In-page tabbed content migrated from FedEx Custom Critical Owner Operators pages (Advantages: Programs / Communications / Online Tools; Overview / Advantages).",
+  "options": [],
+  "memberVariantIds": ["tabs"]
+}
