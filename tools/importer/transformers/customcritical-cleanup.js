@@ -12,7 +12,7 @@
  * information" callout) IS authorable page content and is kept — it is imported
  * as its own section alongside #col-main so the multi-level nav survives the
  * publishing pipeline as default content (a nested list cannot live inside a
- * block-table cell). Only its decorative inline icon <img> is dropped.
+ * block-table cell). Only its decorative inline info icon is dropped.
  *
  * All selectors verified against migration-work/cleaned.html:
  *  - #fxg-header-container / header.fxg-header  -> global site header (lines 11-165)
@@ -55,5 +55,19 @@ export default function transform(hookName, element, payload) {
         }
       });
     }
+
+    // Rewrite legacy internal .shtml links to their migrated EDS paths.
+    // Source nav links point to `/us/owneroperator/.../default.shtml` (and
+    // `?tab=` states). Left as-is, the importer's path sanitizer turns the dot
+    // into `-shtml`, producing broken 404 URLs like `.../default-shtml`. EDS
+    // pages are extensionless, so strip `.shtml` (and any query/hash) from
+    // same-site relative links. External/absolute links are left untouched.
+    element.querySelectorAll('a[href*=".shtml"]').forEach((a) => {
+      const href = a.getAttribute('href');
+      // only rewrite root-relative internal links (not absolute http(s) URLs)
+      if (!href || /^https?:/i.test(href)) return;
+      const clean = href.replace(/\.shtml(?:[?#].*)?$/i, '');
+      a.setAttribute('href', clean);
+    });
   }
 }
