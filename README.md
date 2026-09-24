@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--fxf-customcritical--mrugesh-adobe.aem.page/
-- Live: https://main--fxf-customcritical--mrugesh-adobe.aem.live/
+- Preview: https://main--fxf-cc--mrugesh-adobe.aem.page/
+- Live: https://main--fxf-cc--mrugesh-adobe.aem.live/
 
 ## Documentation
 
