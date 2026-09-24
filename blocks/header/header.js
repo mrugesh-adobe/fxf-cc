@@ -45,7 +45,9 @@ function decorateSections(sectionsWrap, nav) {
     if (!submenu) return;
     li.classList.add('nav-drop');
     li.setAttribute('aria-expanded', 'false');
-    const trigger = li.querySelector(':scope > a');
+    // the trigger link is either a direct child <a> or wrapped in a leading <p>
+    // (the publishing pipeline wraps default-content links in <p>) — accept both.
+    const trigger = li.querySelector(':scope > a, :scope > p > a');
     if (!trigger) return;
     // aria-expanded lives on the trigger link (the expandable control) and is
     // mirrored on the li so CSS can key panel visibility off either.
