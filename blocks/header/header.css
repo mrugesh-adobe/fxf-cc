@@ -9,9 +9,10 @@
   --fxf-header-strip: rgb(86 86 86);       /* grey utility strip (#565656) */
   --fxf-header-text: #fff;                 /* white nav text */
   --fxf-header-link: #fff;                 /* white nav links */
+  --fxf-header-accent: rgb(0 122 183);     /* FedEx Freight blue (panel landing link) */
   --fxcc-nav-height: 75px;
   --fxcc-submenu-bg: #fff;
-  --fxcc-submenu-link: rgb(51 51 51);
+  --fxcc-submenu-link: rgb(51 51 51);      /* dark panel row text (#333) */
 }
 
 /* header and nav layout (mobile-first) */
@@ -351,16 +352,24 @@ header .nav-overlay.nav-overlay-visible {
     transform: rotate(-135deg);
   }
 
-  /* open sub-menu panel */
+  /* open trigger tab — FedEx Freight highlights the active tab with a white
+     panel top and a dashed focus outline that connects to the dropdown below */
+  header nav .nav-sections > ul > li.nav-drop[aria-expanded='true'] > a,
+  header nav .nav-sections > ul > li.nav-drop > a[aria-expanded='true'] {
+    outline: 1px dashed rgb(255 255 255 / 70%);
+    outline-offset: -6px;
+  }
+
+  /* open sub-menu panel — white flyout, flush under the tab */
   header nav .nav-sections > ul > li > ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 240px;
-    padding: 8px 0;
+    min-width: 300px;
+    padding: 0;
     background: var(--fxcc-submenu-bg);
-    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 25%);
     z-index: 30;
   }
 
@@ -373,18 +382,35 @@ header .nav-overlay.nav-overlay-visible {
     border-top: 0;
   }
 
+  /* each row separated by a hairline divider (like the FedEx Freight panel) */
+  /* stylelint-disable-next-line no-descending-specificity */
+  header nav .nav-sections > ul > li > ul > li + li {
+    border-top: 1px solid rgb(0 0 0 / 10%);
+  }
+
   /* stylelint-disable-next-line no-descending-specificity */
   header nav .nav-sections > ul > li > ul > li > a {
     display: block;
-    padding: 10px 20px;
-    font-size: 13px;
-    font-weight: 300;
+    padding: 18px 24px;
+    font-size: 15px;
+    font-weight: 400;
     color: var(--fxcc-submenu-link);
     white-space: nowrap;
   }
 
+  /* stylelint-disable-next-line no-descending-specificity */
   header nav .nav-sections > ul > li > ul > li > a:hover {
     background: rgb(0 0 0 / 4%);
+  }
+
+  /* last row in the panel reads as the section landing link (blue, bold,
+     uppercase) — matches FedEx Freight's "OVERVIEW" row */
+  /* stylelint-disable-next-line no-descending-specificity */
+  header nav .nav-sections > ul > li > ul > li:last-child > a {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--fxf-header-accent);
   }
 
   header nav .nav-tools {
