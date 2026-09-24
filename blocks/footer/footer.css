@@ -1,10 +1,12 @@
-/* FedEx Custom Critical footer */
+/* FedEx Freight footer — dark-grey band, white uppercase headings, white links.
+   Restyled from the FedEx Custom Critical footer (structure unchanged);
+   colors/typography match fedexfreight.com/en-us. */
 
 :root {
-  --fxcc-footer-bg: rgb(250 250 250);
-  --fxcc-footer-text: rgb(89 89 91);
-  --fxcc-footer-heading: rgb(77 20 140);
-  --fxcc-footer-purple: rgb(77 20 140);
+  --fxcc-footer-bg: rgb(86 86 86);          /* FedEx Freight footer grey #565656 */
+  --fxcc-footer-text: rgb(255 255 255);     /* white text/links */
+  --fxcc-footer-heading: rgb(255 255 255);  /* white uppercase headings */
+  --fxcc-footer-purple: rgb(64 64 64);      /* darker grey copyright band */
 }
 
 footer {
@@ -68,7 +70,7 @@ footer .footer-primary a {
 /* social section */
 footer .footer-social {
   padding-bottom: 30px;
-  border-top: 1px solid rgb(89 89 91 / 50%);
+  border-top: 1px solid rgb(255 255 255 / 25%);
   padding-top: 24px;
 }
 

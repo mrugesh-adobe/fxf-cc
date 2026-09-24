@@ -1,30 +1,36 @@
-/* FedEx Custom Critical header — solid purple bar, click-triggered dropdowns */
+/* FedEx Freight header — white bar with a dark utility strip, blue links.
+   Restyled from the FedEx Custom Critical purple header (structure unchanged);
+   colors/typography match fedexfreight.com/en-us. */
 
 :root {
-  --fxcc-purple: rgb(77 20 140);
+  --fxcc-purple: rgb(77 20 140);          /* retained for reference */
+  --fxf-header-bg: #fff;                   /* white header bar */
+  --fxf-header-text: rgb(51 51 51);        /* dark nav text */
+  --fxf-header-link: rgb(0 122 183);       /* FedEx Freight blue */
+  --fxf-header-strip: rgb(86 86 86);       /* dark-grey utility strip / mobile menu */
   --fxcc-nav-height: 75px;
   --fxcc-submenu-bg: #fff;
-  --fxcc-submenu-link: rgb(88 89 91);
+  --fxcc-submenu-link: rgb(51 51 51);
 }
 
 /* header and nav layout (mobile-first) */
 
-/* paint purple on the block + wrapper too so the bar is solid before/while the
-   nav decorates (keeps the header legible at rest — never white-on-white) */
+/* white header bar with a soft divider so it reads as a distinct band */
 header,
 header .header,
 header .header.block {
-  background-color: var(--fxcc-purple);
+  background-color: var(--fxf-header-bg);
 }
 
 header .nav-wrapper {
-  background-color: var(--fxcc-purple);
+  background-color: var(--fxf-header-bg);
   width: 100%;
   z-index: 20;
   position: fixed;
   top: 0;
   font-size: 12px;
   line-height: normal;
+  border-bottom: 1px solid rgb(0 0 0 / 10%);
 }
 
 header nav {
@@ -43,8 +49,8 @@ header nav {
   font-family: roboto, var(--body-font-family, sans-serif);
   font-size: 12px;
   line-height: normal;
-  color: #fff;
-  background-color: var(--fxcc-purple);
+  color: var(--fxf-header-text);
+  background-color: var(--fxf-header-bg);
 }
 
 header nav[aria-expanded='true'] {
@@ -78,7 +84,7 @@ header nav .nav-hamburger button {
   border-radius: 0;
   padding: 0;
   background: transparent;
-  color: #fff;
+  color: var(--fxf-header-text);
   cursor: pointer;
 }
 
@@ -161,6 +167,9 @@ header nav[aria-expanded='true'] .nav-sections {
   /* full-bleed to the viewport edges: cancel the nav's 20px side padding */
   width: calc(100% + 40px);
   margin: 0 -20px;
+
+  /* dark menu panel (matches FedEx Freight's mobile nav) so white links stay legible */
+  background-color: var(--fxf-header-strip);
 }
 
 header nav .nav-sections ul {
@@ -225,7 +234,7 @@ header nav .nav-search-toggle {
   border: 0;
   padding: 4px;
   margin: 0;
-  color: #fff;
+  color: var(--fxf-header-text);
   cursor: pointer;
   align-items: center;
 }
@@ -240,7 +249,7 @@ header nav .nav-search-form input {
   width: 100%;
   height: 40px;
   padding: 0 14px;
-  border: 0;
+  border: 1px solid rgb(0 0 0 / 20%);
   border-radius: 20px;
   font-size: 14px;
 }
@@ -309,6 +318,11 @@ header .nav-overlay.nav-overlay-visible {
     font-weight: 400;
     line-height: 14px;
     white-space: nowrap;
+    color: var(--fxf-header-link);
+  }
+
+  header nav .nav-sections > ul > li > a:hover {
+    color: rgb(0 96 145);
   }
 
   /* dropdown caret */
@@ -324,7 +338,7 @@ header .nav-overlay.nav-overlay-visible {
     width: 6px;
     height: 6px;
     margin-top: -4px;
-    border: solid #fff;
+    border: solid var(--fxf-header-link);
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
     transition: transform 0.2s ease;
