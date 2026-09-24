@@ -52,8 +52,10 @@ function decorateSections(sectionsWrap, nav) {
     trigger.setAttribute('aria-expanded', 'false');
     trigger.setAttribute('aria-haspopup', 'true');
     trigger.addEventListener('click', (e) => {
-      // top-level trigger only toggles the panel (href is '#')
-      if (trigger.getAttribute('href') === '#') e.preventDefault();
+      // a top-level trigger that owns a submenu only toggles the panel — never
+      // navigates — regardless of its href (source uses '#', but the publishing
+      // pipeline rewrites that to '/', so we must always preventDefault here).
+      e.preventDefault();
       const wasOpen = trigger.getAttribute('aria-expanded') === 'true';
       closeAllDropdowns(nav);
       if (!wasOpen) {
