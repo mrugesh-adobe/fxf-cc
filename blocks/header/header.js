@@ -21,7 +21,8 @@ const CLOSE_ICON = `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden=
 
 /** Close every open dropdown and hide the overlay. */
 function closeAllDropdowns(nav) {
-  nav.querySelectorAll('.nav-drop > a[aria-expanded="true"]').forEach((trigger) => {
+  // trigger link is either a direct child <a> or wrapped in a leading <p>
+  nav.querySelectorAll('.nav-drop > a[aria-expanded="true"], .nav-drop > p > a[aria-expanded="true"]').forEach((trigger) => {
     trigger.setAttribute('aria-expanded', 'false');
     const li = trigger.closest('.nav-drop');
     if (li) li.setAttribute('aria-expanded', 'false');
@@ -45,15 +46,28 @@ function decorateSections(sectionsWrap, nav) {
     if (!submenu) return;
     li.classList.add('nav-drop');
     li.setAttribute('aria-expanded', 'false');
-    const trigger = li.querySelector(':scope > a');
+    // the trigger link is either a direct child <a> or wrapped in a leading <p>
+    // (the publishing pipeline wraps default-content links in <p>). Unwrap that
+    // <p> so the <a> is a direct child of the <li>, letting the desktop
+    // `li > a` tab styling apply uniformly. Same link/text/href — layout only.
+    let trigger = li.querySelector(':scope > a, :scope > p > a');
+    if (!trigger) return;
+    if (trigger.parentElement.tagName === 'P' && trigger.parentElement.parentElement === li) {
+      const p = trigger.parentElement;
+      li.insertBefore(trigger, p);
+      if (!p.textContent.trim() && !p.querySelector('img')) p.remove();
+    }
+    trigger = li.querySelector(':scope > a');
     if (!trigger) return;
     // aria-expanded lives on the trigger link (the expandable control) and is
     // mirrored on the li so CSS can key panel visibility off either.
     trigger.setAttribute('aria-expanded', 'false');
     trigger.setAttribute('aria-haspopup', 'true');
     trigger.addEventListener('click', (e) => {
-      // top-level trigger only toggles the panel (href is '#')
-      if (trigger.getAttribute('href') === '#') e.preventDefault();
+      // a top-level trigger that owns a submenu only toggles the panel — never
+      // navigates — regardless of its href (source uses '#', but the publishing
+      // pipeline rewrites that to '/', so we must always preventDefault here).
+      e.preventDefault();
       const wasOpen = trigger.getAttribute('aria-expanded') === 'true';
       closeAllDropdowns(nav);
       if (!wasOpen) {

@@ -4,7 +4,8 @@
   --fxcc-purple: rgb(77 20 140);
   --fxcc-nav-height: 75px;
   --fxcc-submenu-bg: #fff;
-  --fxcc-submenu-link: rgb(88 89 91);
+  --fxcc-submenu-link: rgb(51 51 51);       /* dark panel row text (#333) */
+  --fxcc-submenu-accent: rgb(0 131 199);    /* blue "ALL SERVICES" landing row */
 }
 
 /* header and nav layout (mobile-first) */
@@ -336,16 +337,28 @@ header .nav-overlay.nav-overlay-visible {
     transform: rotate(-135deg);
   }
 
-  /* open sub-menu panel */
+  /* caret flips to the brand purple on the white active tab */
+  header nav .nav-sections > ul > li.nav-drop[aria-expanded='true'] > a::after {
+    border-color: var(--fxcc-purple);
+  }
+
+  /* open trigger tab — FedEx Custom Critical raises a WHITE tab with purple
+     text over the purple bar, connecting to the white panel below */
+  header nav .nav-sections > ul > li.nav-drop[aria-expanded='true'] > a {
+    background: var(--fxcc-submenu-bg);
+    color: var(--fxcc-purple);
+  }
+
+  /* open sub-menu panel — white flyout, flush under the tab */
   header nav .nav-sections > ul > li > ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 240px;
-    padding: 8px 0;
+    min-width: 300px;
+    padding: 0;
     background: var(--fxcc-submenu-bg);
-    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 25%);
     z-index: 30;
   }
 
@@ -358,18 +371,35 @@ header .nav-overlay.nav-overlay-visible {
     border-top: 0;
   }
 
+  /* hairline dividers between panel rows (matches the source dropdown) */
+  /* stylelint-disable-next-line no-descending-specificity */
+  header nav .nav-sections > ul > li > ul > li + li {
+    border-top: 1px solid rgb(0 0 0 / 10%);
+  }
+
   /* stylelint-disable-next-line no-descending-specificity */
   header nav .nav-sections > ul > li > ul > li > a {
     display: block;
-    padding: 10px 20px;
-    font-size: 13px;
-    font-weight: 300;
+    padding: 16px 20px;
+    font-size: 15px;
+    font-weight: 400;
     color: var(--fxcc-submenu-link);
     white-space: nowrap;
   }
 
+  /* stylelint-disable-next-line no-descending-specificity */
   header nav .nav-sections > ul > li > ul > li > a:hover {
     background: rgb(0 0 0 / 4%);
+  }
+
+  /* last row is the section landing link — brand-blue, bold, uppercase
+     (matches the "ALL SERVICES" row in the source dropdown) */
+  /* stylelint-disable-next-line no-descending-specificity */
+  header nav .nav-sections > ul > li > ul > li:last-child > a {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--fxcc-submenu-accent);
   }
 
   header nav .nav-tools {
