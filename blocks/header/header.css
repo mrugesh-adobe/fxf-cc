@@ -352,11 +352,17 @@ header .nav-overlay.nav-overlay-visible {
     transform: rotate(-135deg);
   }
 
-  /* open trigger tab — FedEx Freight highlights the active tab with a white
-     panel top and a dashed focus outline that connects to the dropdown below */
-  header nav .nav-sections > ul > li.nav-drop[aria-expanded='true'] > a,
-  header nav .nav-sections > ul > li.nav-drop > a[aria-expanded='true'] {
-    outline: 1px dashed rgb(255 255 255 / 70%);
+  /* caret flips to a dark chevron on the white active tab */
+  header nav .nav-sections > ul > li.nav-drop[aria-expanded='true'] > a::after {
+    border-color: var(--fxcc-submenu-link);
+  }
+
+  /* open trigger tab — FedEx Freight highlights the active tab with a WHITE
+     background + dark text and a dashed outline, connecting to the panel below */
+  header nav .nav-sections > ul > li.nav-drop[aria-expanded='true'] > a {
+    background: var(--fxcc-submenu-bg);
+    color: var(--fxcc-submenu-link);
+    outline: 1px dashed rgb(0 0 0 / 45%);
     outline-offset: -6px;
   }
 
