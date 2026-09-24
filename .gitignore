@@ -24,3 +24,6 @@ migration-work/footer-validation/
 # importer build/run artifacts (regenerable)
 tools/importer/*.bundle.js
 tools/importer/reports/
+
+# impeccable machine-local hook cache (shared config.json IS tracked)
+.impeccable/hook.cache.json
