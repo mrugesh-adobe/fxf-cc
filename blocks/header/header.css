@@ -1,13 +1,14 @@
-/* FedEx Freight header — white bar with a dark utility strip, blue links.
+/* FedEx Freight header — dark charcoal bar with white nav links.
    Restyled from the FedEx Custom Critical purple header (structure unchanged);
-   colors/typography match fedexfreight.com/en-us. */
+   colors/typography match fedexfreight.com/en-us (charcoal #333 nav bar over a
+   #565656 utility strip). */
 
 :root {
   --fxcc-purple: rgb(77 20 140);          /* retained for reference */
-  --fxf-header-bg: #fff;                   /* white header bar */
-  --fxf-header-text: rgb(51 51 51);        /* dark nav text */
-  --fxf-header-link: rgb(0 122 183);       /* FedEx Freight blue */
-  --fxf-header-strip: rgb(86 86 86);       /* dark-grey utility strip / mobile menu */
+  --fxf-header-bg: rgb(51 51 51);          /* charcoal nav bar (#333) */
+  --fxf-header-strip: rgb(86 86 86);       /* grey utility strip (#565656) */
+  --fxf-header-text: #fff;                 /* white nav text */
+  --fxf-header-link: #fff;                 /* white nav links */
   --fxcc-nav-height: 75px;
   --fxcc-submenu-bg: #fff;
   --fxcc-submenu-link: rgb(51 51 51);
@@ -15,7 +16,8 @@
 
 /* header and nav layout (mobile-first) */
 
-/* white header bar with a soft divider so it reads as a distinct band */
+/* dark charcoal header bar (kept solid on block + wrapper so it never flashes
+   white-on-white before the nav decorates) */
 header,
 header .header,
 header .header.block {
@@ -30,7 +32,6 @@ header .nav-wrapper {
   top: 0;
   font-size: 12px;
   line-height: normal;
-  border-bottom: 1px solid rgb(0 0 0 / 10%);
 }
 
 header nav {
@@ -322,7 +323,7 @@ header .nav-overlay.nav-overlay-visible {
   }
 
   header nav .nav-sections > ul > li > a:hover {
-    color: rgb(0 96 145);
+    color: rgb(255 255 255 / 75%);
   }
 
   /* dropdown caret */
