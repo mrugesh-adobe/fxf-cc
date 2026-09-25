@@ -1,0 +1,17 @@
+{
+  "discovery": {
+    "fetchTechnique": "headless",
+    "count": 4,
+    "concurrency": 4
+  },
+  "consent": {
+    "method": "auto"
+  },
+  "favicon": {
+    "url": "https://customcritical.fedex.com//favicon.ico",
+    "file": "assets/favicon.ico"
+  },
+  "crawl": {
+    "failures": []
+  }
+}

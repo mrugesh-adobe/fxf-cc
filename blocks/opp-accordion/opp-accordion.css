@@ -1,0 +1,89 @@
+/* opp-accordion — FAQ accordion, prototype-styled. Scoped under .opp-accordion. */
+
+.opp-accordion {
+  background: rgb(244 242 247);
+  border-radius: 6px;
+  padding: 8px 24px;
+  max-width: 900px;
+}
+
+.opp-accordion .opp-accordion-item {
+  border-bottom: 1px solid rgb(226 222 233);
+}
+
+.opp-accordion .opp-accordion-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(26 26 26);
+  cursor: pointer;
+  list-style: none;
+}
+
+.opp-accordion .opp-accordion-label::-webkit-details-marker {
+  display: none;
+}
+
+.opp-accordion .opp-accordion-label:hover {
+  color: var(--fxcc-purple-deep, rgb(55 9 107));
+}
+
+.opp-accordion .opp-accordion-icon {
+  position: relative;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+}
+
+.opp-accordion .opp-accordion-icon::before,
+.opp-accordion .opp-accordion-icon::after {
+  content: "";
+  position: absolute;
+  background: var(--fxcc-orange, rgb(255 102 0));
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.opp-accordion .opp-accordion-icon::before {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform: translateY(-50%);
+}
+
+.opp-accordion .opp-accordion-icon::after {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  transform: translateX(-50%);
+}
+
+.opp-accordion .opp-accordion-item[open] .opp-accordion-icon::after {
+  transform: translateX(-50%) scaleY(0);
+  opacity: 0;
+}
+
+.opp-accordion .opp-accordion-body {
+  padding: 0 0 24px;
+  color: rgb(88 89 91);
+  max-width: 100%;
+}
+
+.opp-accordion .opp-accordion-body p,
+.opp-accordion .opp-accordion-body ul {
+  color: rgb(88 89 91);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opp-accordion .opp-accordion-icon::before,
+  .opp-accordion .opp-accordion-icon::after {
+    transition: none;
+  }
+}

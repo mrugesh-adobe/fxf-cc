@@ -1,0 +1,336 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-09-24T12:42:22.844Z",
+    "waitMode": "medium",
+    "waitMs": 2500,
+    "httpStatus": 200
+  },
+  "slug": "us-owneroperator-default-shtml",
+  "url": "https://customcritical.fedex.com/us/owneroperator/default.shtml",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-09-24T12:42:22.844Z",
+  "finalUrl": "https://customcritical.fedex.com/us/owneroperator/default.shtml",
+  "title": "Expedite Owner Operators, Expedited Transportation, Independent Contractors",
+  "description": "expedited transportation - The FedEx Custom Critical fleet is made up entirely of owner operators.",
+  "og": {
+    "title": null,
+    "description": null,
+    "image": null,
+    "type": null
+  },
+  "headings": [
+    {
+      "tag": "h2",
+      "text": "Additional information"
+    },
+    {
+      "tag": "h1",
+      "text": "Owner Operators"
+    },
+    {
+      "tag": "h2",
+      "text": "Overview / Advantages"
+    },
+    {
+      "tag": "h2",
+      "text": "Qualifications"
+    },
+    {
+      "tag": "h2",
+      "text": "Contract With Us"
+    }
+  ],
+  "body": [
+    "Shipping Ship Fast Ship Get Rates & Transit Times ALL SERVICES",
+    "Tracking Detailed Track",
+    "Manage View Shipping Documents Review Open Invoices Change Password Add Locations SHIPPING TOOLKIT HOME",
+    "Support Reset Password Contact Us CALL US: 1.800.762.3787",
+    "Owner Operators Overview / Advantages Programs Communications Online Tools Qualifications / Specifications Small Straight Trucks Large Straight Trucks Tractor Trailers Frequently Asked Questions",
+    "Overview / Advantages Programs Communications Online Tools",
+    "Programs",
+    "Communications",
+    "Online Tools",
+    "Qualifications / Specifications Small Straight Trucks Large Straight Trucks Tractor Trailers",
+    "Small Straight Trucks",
+    "Large Straight Trucks",
+    "Tractor Trailers",
+    "Frequently Asked Questions",
+    "Call us now at 1.866.711.3599",
+    "Owner-Operator opportunities",
+    "CDL driver opportunities",
+    "The FedEx Custom Critical fleet is made up entirely of owner operators. If you own your vehicle, or have plans to purchase one, read on to learn about your opportunity as an independent contractor.",
+    "Learn why FedEx Custom Critical is a great opportunity for owner operators. Find out more",
+    "Get the specs and safety requirements for each of the vehicle sizes in our fleet. See the requirements",
+    "Interested? Get the ball rolling ...",
+    "Call us now at 1.866.711.3599",
+    "Owner-Operator opportunities",
+    "CDL driver opportunities"
+  ],
+  "codeBlocks": [],
+  "ctas": [
+    {
+      "label": "Shipping",
+      "href": "#"
+    },
+    {
+      "label": "Tracking",
+      "href": "#"
+    },
+    {
+      "label": "Manage",
+      "href": "#"
+    },
+    {
+      "label": "Support",
+      "href": "#"
+    },
+    {
+      "label": "Owner Operators",
+      "href": "/us/owneroperator/default.shtml"
+    },
+    {
+      "label": "Overview / Advantages",
+      "href": "/us/owneroperator/overview/default.shtml"
+    },
+    {
+      "label": "Programs",
+      "href": "/us/owneroperator/advantages/default.shtml?tab=programs"
+    },
+    {
+      "label": "Communications",
+      "href": "/us/owneroperator/advantages/default.shtml?tab=comm"
+    },
+    {
+      "label": "Online Tools",
+      "href": "/us/owneroperator/advantages/default.shtml?tab=tools"
+    },
+    {
+      "label": "Qualifications / Specifications",
+      "href": "/us/owneroperator/quals/default.shtml"
+    },
+    {
+      "label": "Small Straight Trucks",
+      "href": "/us/owneroperator/quals/smstrtrk.shtml"
+    },
+    {
+      "label": "Large Straight Trucks",
+      "href": "/us/owneroperator/quals/lgstrtrk.shtml"
+    },
+    {
+      "label": "Tractor Trailers",
+      "href": "/us/owneroperator/quals/tractortrailer.shtml"
+    },
+    {
+      "label": "Frequently Asked Questions",
+      "href": "/us/owneroperator/faqs/default.shtml"
+    },
+    {
+      "label": "1.866.711.3599",
+      "href": "tel:18667113599"
+    },
+    {
+      "label": "Owner-Operator opportunities",
+      "href": "https://intelliapp.driverapponline.com/m/fedexcc?r=fccwebnav"
+    },
+    {
+      "label": "CDL driver opportunities",
+      "href": "https://intelliapp.driverapponline.com/m/fedexccfleetdriver?r=fccwebnav"
+    },
+    {
+      "label": "Find out more",
+      "href": "/us/owneroperator/overview/default.shtml"
+    },
+    {
+      "label": "See the requirements",
+      "href": "/us/owneroperator/quals/default.shtml"
+    },
+    {
+      "label": "1.866.711.3599",
+      "href": "tel:18667113599"
+    },
+    {
+      "label": "Owner-Operator opportunities",
+      "href": "https://intelliapp.driverapponline.com/m/fedexcc?r=fccweb"
+    },
+    {
+      "label": "CDL driver opportunities",
+      "href": "https://intelliapp.driverapponline.com/m/fedexccfleetdriver?r=fccwebnav"
+    },
+    {
+      "label": "About FedEx",
+      "href": "//about.fedex.com/"
+    },
+    {
+      "label": "Our Portfolio",
+      "href": "//about.van.fedex.com/our-story/company-structure/"
+    },
+    {
+      "label": "Investor Relations",
+      "href": "//www.fedex.com/us/investorrelations/"
+    },
+    {
+      "label": "Careers",
+      "href": "//careers.fedex.com/customcritical"
+    },
+    {
+      "label": "FedEx Blog",
+      "href": "//about.van.fedex.com/blog/"
+    },
+    {
+      "label": "Corporate Responsibility",
+      "href": "//about.van.fedex.com/social-responsibility/csr-policy-statements/"
+    },
+    {
+      "label": "FedEx Newsroom",
+      "href": "//about.van.fedex.com/newsroom/global-english/"
+    },
+    {
+      "label": "Contact Us",
+      "href": "//www.fedex.com/en-us/customer-support.html"
+    },
+    {
+      "label": "FedEx Aerospace Solutions",
+      "href": "//www.fedex.com/en-us/aerospace.html"
+    },
+    {
+      "label": "FedEx Healthcare Solutions",
+      "href": "//www.fedex.com/en-us/healthcare.html"
+    },
+    {
+      "label": "FedEx Logistics",
+      "href": "//www.fedex.com/en-us/logistics.html"
+    },
+    {
+      "label": "Freight Shipping",
+      "href": "//www.fedex.com/en-us/shipping/freight.html"
+    },
+    {
+      "label": "Feedback",
+      "href": "//www.fedex.com/en-us/customer-support.html"
+    },
+    {
+      "label": "Site Map",
+      "href": "//www.fedex.com/us/sitemap.html"
+    },
+    {
+      "label": "Terms of Use",
+      "href": "//www.fedex.com/en-us/terms-of-use.html"
+    },
+    {
+      "label": "Privacy & Security",
+      "href": "//www.fedex.com/en-us/trust-center.html"
+    }
+  ],
+  "links": [
+    "https://customcritical.fedex.com/",
+    "https://customcritical.fedex.com/us/owneroperator/default.shtml#",
+    "https://customcritical.fedex.com/ShippingToolkit/Ship",
+    "https://customcritical.fedex.com/ShippingToolkit/Ship/fastShip.do",
+    "https://customcritical.fedex.com/ShippingToolkit/Rates",
+    "https://customcritical.fedex.com/us/services/default.shtml",
+    "https://customcritical.fedex.com/ShippingToolkit/DetailTrack",
+    "https://customcritical.fedex.com/ShippingToolkit/ShippingDocuments",
+    "https://customcritical.fedex.com/ShippingToolkit/AccountSummary",
+    "https://customcritical.fedex.com/ShippingToolkit/ChangePassword",
+    "https://customcritical.fedex.com/ShippingToolkit/Location",
+    "https://customcritical.fedex.com/us/shipping/default.shtml",
+    "https://customcritical.fedex.com/ShippingToolkit/ResetPassword",
+    "https://www.fedex.com/us/customersupport/email/customcritical.html",
+    "tel:18007623787",
+    "https://www.fedex.com/en-us/logistics.html",
+    "https://customcritical.fedex.com/us/services/documents/default.shtml",
+    "https://customcritical.fedex.com/us/owneroperator/default.shtml",
+    "https://customcritical.fedex.com/us/owneroperator/overview/default.shtml",
+    "https://customcritical.fedex.com/us/owneroperator/advantages/default.shtml?tab=programs",
+    "https://customcritical.fedex.com/us/owneroperator/advantages/default.shtml?tab=comm",
+    "https://customcritical.fedex.com/us/owneroperator/advantages/default.shtml?tab=tools",
+    "https://customcritical.fedex.com/us/owneroperator/quals/default.shtml",
+    "https://customcritical.fedex.com/us/owneroperator/quals/smstrtrk.shtml",
+    "https://customcritical.fedex.com/us/owneroperator/quals/lgstrtrk.shtml",
+    "https://customcritical.fedex.com/us/owneroperator/quals/tractortrailer.shtml",
+    "https://customcritical.fedex.com/us/owneroperator/faqs/default.shtml",
+    "tel:18667113599",
+    "https://intelliapp.driverapponline.com/m/fedexcc?r=fccwebnav",
+    "https://intelliapp.driverapponline.com/m/fedexccfleetdriver?r=fccwebnav",
+    "https://intelliapp.driverapponline.com/m/fedexcc?r=fccweb",
+    "https://about.fedex.com/",
+    "https://about.van.fedex.com/our-story/company-structure/",
+    "https://www.fedex.com/us/investorrelations/",
+    "https://careers.fedex.com/customcritical",
+    "https://about.van.fedex.com/blog/",
+    "https://about.van.fedex.com/social-responsibility/csr-policy-statements/",
+    "https://about.van.fedex.com/newsroom/global-english/",
+    "https://www.fedex.com/en-us/customer-support.html",
+    "https://www.fedex.com/en-us/aerospace.html",
+    "https://www.fedex.com/en-us/healthcare.html",
+    "https://www.fedex.com/en-us/shipping/freight.html",
+    "https://www.fedex.com/en-us/email.html",
+    "https://www.facebook.com/fedex",
+    "https://twitter.com/fedex",
+    "https://www.instagram.com/fedex",
+    "https://www.linkedin.com/company/fedex-custom-critical",
+    "https://www.youtube.com/fedex",
+    "https://www.pinterest.com/fedex",
+    "https://www.fedex.com/us/sitemap.html",
+    "https://www.fedex.com/en-us/terms-of-use.html",
+    "https://www.fedex.com/en-us/trust-center.html"
+  ],
+  "media": {
+    "imgs": [
+      {
+        "src": "https://customcritical.fedex.com/images/fxcc-logo.png",
+        "alt": "FedEx Custom Critical Logo",
+        "w": 176,
+        "h": 50
+      },
+      {
+        "src": "https://customcritical.fedex.com/images/745x150oo1.jpg",
+        "alt": "",
+        "w": 745,
+        "h": 150
+      },
+      {
+        "src": "https://customcritical.fedex.com/images/legacy/icon-info.png",
+        "alt": "",
+        "w": 20,
+        "h": 20
+      },
+      {
+        "src": "https://customcritical.fedex.com/images/235x110oo1.jpg",
+        "alt": "",
+        "w": 235,
+        "h": 110
+      },
+      {
+        "src": "https://customcritical.fedex.com/images/235x110oo4.jpg",
+        "alt": "",
+        "w": 235,
+        "h": 110
+      },
+      {
+        "src": "https://customcritical.fedex.com/images/235x110oo3.jpg",
+        "alt": "",
+        "w": 235,
+        "h": 110
+      }
+    ],
+    "allImgCount": 17,
+    "cssBackgrounds": [],
+    "modals": [],
+    "videos": [],
+    "iframes": []
+  },
+  "customProps": {},
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 5,
+    "mainTextLen": 2287,
+    "realImageCount": 6,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false,
+    "screenshotMode": "fullPage"
+  },
+  "screenshot": "assets/screenshots/us-owneroperator-default-shtml.png",
+  "renderedHtml": "pages/us-owneroperator-default-shtml.html"
+}

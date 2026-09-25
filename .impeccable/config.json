@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "roboto",
+        "createdAt": "2026-09-25T10:11:42.353Z",
+        "reason": "User confirmed roboto is intentional (FedEx Custom Critical brand font)"
+      }
+    ]
+  }
+}

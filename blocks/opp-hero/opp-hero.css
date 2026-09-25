@@ -1,0 +1,129 @@
+/* opp-hero — Owner/Operator Opportunities intro hero.
+   Prototype-styled; scoped under .opp-hero so shared blocks are untouched. */
+
+.opp-hero .opp-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.opp-hero .opp-hero-grid.opp-hero-nomedia {
+  grid-template-columns: 1fr;
+}
+
+.opp-hero .opp-hero-nomedia .opp-hero-copy {
+  max-width: 760px;
+}
+
+.opp-hero .opp-hero-copy h1 {
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--fxcc-purple-deep, rgb(55 9 107));
+  margin: 0 0 16px;
+}
+
+.opp-hero .opp-hero-lede p {
+  font-size: 18px;
+  color: rgb(26 26 26);
+  margin: 0 0 12px;
+}
+
+.opp-hero .opp-hero-sub p {
+  color: rgb(88 89 91);
+  margin: 0 0 12px;
+}
+
+.opp-hero .opp-hero-list ul {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 20px;
+  padding: 0;
+}
+
+.opp-hero .opp-hero-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  color: rgb(26 26 26);
+}
+
+.opp-hero .opp-hero-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.65rem;
+  height: 0.65rem;
+  background: var(--fxcc-orange, rgb(255 102 0));
+  border-radius: 2px;
+}
+
+.opp-hero .opp-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* prototype buttons, scoped here so the site-wide grey button is untouched */
+.opp-hero a.button:any-link {
+  border-radius: 6px;
+  padding: 0.85rem 1.4rem;
+  font-weight: 700;
+}
+
+.opp-hero a.button.primary {
+  border-color: var(--fxcc-orange, rgb(255 102 0));
+  background-color: var(--fxcc-orange, rgb(255 102 0));
+  color: #fff;
+}
+
+.opp-hero a.button.primary:hover,
+.opp-hero a.button.primary:focus-visible {
+  border-color: var(--fxcc-orange-deep, #e25100);
+  background-color: var(--fxcc-orange-deep, #e25100);
+  color: #fff;
+}
+
+.opp-hero a.button.secondary {
+  border-color: var(--fxcc-purple, rgb(77 20 140));
+  background-color: transparent;
+  color: var(--fxcc-purple-deep, rgb(55 9 107));
+}
+
+.opp-hero a.button.secondary:hover,
+.opp-hero a.button.secondary:focus-visible {
+  border-color: var(--fxcc-purple, rgb(77 20 140));
+  background-color: var(--fxcc-purple, rgb(77 20 140));
+  color: #fff;
+}
+
+.opp-hero .opp-hero-media {
+  line-height: 0;
+}
+
+.opp-hero .opp-hero-media img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgb(77 20 140 / 14%);
+}
+
+@media (width <= 900px) {
+  .opp-hero .opp-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .opp-hero .opp-hero-media img {
+    max-height: 300px;
+  }
+}
