@@ -1,0 +1,130 @@
+{
+  "_provenance": {
+    "authoredBy": "stardust:direct",
+    "schemaVersion": 2,
+    "mode": "Mode A (brand-faithful) + Mode A+ refinement",
+    "resolvedAt": "2026-09-24T13:00:00.000Z",
+    "slug": "owneroperator"
+  },
+  "colors": {
+    "ink": "#1A1A1A",
+    "purple": "#4D148C",
+    "purple-deep": "#37096B",
+    "orange": "#FF6600",
+    "orange-deep": "#E25100",
+    "paper": "#FFFFFF",
+    "fog": "#F4F2F7",
+    "hair": "#E2DEE9",
+    "slate": "#58595B"
+  },
+  "typography": {
+    "heading": "Roboto, system-ui, sans-serif",
+    "body": "Roboto, system-ui, sans-serif",
+    "scale": 1.25,
+    "weights": { "display": 900, "heading": 700, "subhead": 500, "body": 400 }
+  },
+  "rounded": "6px",
+  "spacing": {
+    "base": "4pt",
+    "sectionPadding": { "desktop": "64px", "tablet": "48px", "mobile": "32px" },
+    "densityTier": "balanced"
+  },
+  "components": ["button-primary", "button-secondary", "tab", "accordion-row", "card", "link"],
+  "extensions": {
+    "colorMeta": {
+      "primary": "purple",
+      "accent": "orange",
+      "ground": "paper",
+      "panel": "fog",
+      "notes": "purple-deep #37096B is the AA-safe purple for text/large fills on white; #4D148C reserved for bands and accents."
+    },
+    "typographyMeta": {
+      "family": "Roboto",
+      "rationale": "single captured brand body face; unifies the split Times/Roboto system into one modular scale"
+    },
+    "shadows": { "card": "0 1px 3px rgba(77,20,140,0.12)" },
+    "motion": {
+      "register": "arrival",
+      "registerRationale": "PRODUCT.md Brand Personality = civic-formal + institutional → arrival register per selection heuristic",
+      "durations": { "enter": 480, "stagger": 80 }
+    },
+    "breakpoints": { "mobile": 375, "tablet": 768, "desktop": 1280 },
+    "divergence": {
+      "mode": "brand-faithful",
+      "seed": {
+        "decade": { "value": "2025-now", "picked_by": "direction" },
+        "ground_family": { "value": "stark-white", "override": "brand-faithful", "picked_by": "user-constraint" }
+      },
+      "font_deck": { "name": "brand-inherited", "picked_by": "user-constraint" },
+      "palette_source": "inherited from stardust/current/_brand-extraction.json",
+      "brand_faithful_inversions": [
+        { "target": "color", "value": "#FFFFFF", "reason": "brand ground is pure white; retained deliberately" },
+        { "target": "hex-format", "value": "brand hexes kept as #RRGGBB", "reason": "match FedEx brand spec exactly" }
+      ],
+      "brand_adjacent_refinements": [
+        {
+          "kind": "typography",
+          "from": "\"Times New Roman\" headings",
+          "to": "Roboto headings",
+          "evidence": "improvements #1 — Times headings are a legacy template accident, not FedEx brand intent; Roboto is the captured brand face (173 vs 91 occurrences)",
+          "classification": "same-classification upgrade (sans body face extended to headings)"
+        },
+        {
+          "kind": "color",
+          "from": "link #0000EE / #0099CC (browser-default blue + ad-hoc teal)",
+          "to": "link #4D148C purple, #FF6600 orange hover",
+          "evidence": "improvements #2 — two inconsistent non-brand link colors unified to the brand palette"
+        }
+      ],
+      "anti_toolbox_hits": []
+    },
+    "componentStyle": {
+      "buttons": {
+        "primary": "orange fill #FF6600, white label, 6px radius, darken on hover",
+        "secondary": "purple outline on white, purple label, fills purple on hover"
+      },
+      "tabs": "text label, purple bottom-rule when active, panel ground #F4F2F7",
+      "accordion": "full-width row, Roboto 500 question, orange +/- indicator, hairline divider",
+      "cards": "white surface, hairline border, 6px radius, soft purple shadow",
+      "link": "purple underlined, orange on hover/focus — one treatment everywhere"
+    },
+    "systemComponentRoles": {
+      "header": { "purpose": "FedEx Custom Critical masthead", "positionClass": "top", "constraint": "purple band, logo, brand-consistent" },
+      "footer": { "purpose": "FedEx corporate footer + legal bar", "positionClass": "bottom" },
+      "contact-block": { "purpose": "call-to-apply: phone + opportunity links", "positionClass": "page-bottom", "constraint": "verbatim contact details" }
+    },
+    "voice": {
+      "dos": ["plain, benefit-led language", "direct address to drivers/owner operators", "verbatim source copy"],
+      "donts": ["marketing fluff not in the source", "rewriting FAQ answers", "generic SaaS phrasing"]
+    },
+    "iaPriorities": [
+      {
+        "signal": "audience-routing",
+        "evidence": "pages/...default...json — 'Owner-Operator opportunities' and 'CDL driver opportunities' apply links plus call-us phone in the 'Additional information' block",
+        "preserveAs": "page-bottom contact block",
+        "scope": "page",
+        "mutability": "movable"
+      },
+      {
+        "signal": "commercial-conversion",
+        "evidence": "call-us phone 1.866.711.3599 + apply links are the page's conversion actions",
+        "preserveAs": "persistent + repeated (intro + bottom)",
+        "scope": "page",
+        "mutability": "movable"
+      }
+    ]
+  },
+  "narrative": {
+    "northStar": "A modern, unmistakably-FedEx one-page owner/operator recruitment experience: purple + orange on white, one Roboto voice, intro → advantages tabs → FAQ accordion → contact.",
+    "overview": "Consolidates four legacy .shtml pages into a single page; brand-faithful refresh that fixes the Times/Roboto split, unifies link color, and structures advantages as tabs and FAQs as an accordion.",
+    "keyCharacteristics": ["FedEx purple + orange", "single Roboto modular scale", "one-page tabs + accordion IA", "verbatim content"],
+    "rules": [
+      "One type family (Roboto); hierarchy by scale + weight only",
+      "One link treatment site-wide (purple, orange on hover)",
+      "Purple + orange are the only brand hues",
+      "All copy verbatim from stardust/current — no rewriting"
+    ],
+    "dos": ["keep FedEx identity front and center", "make tabs + accordion keyboard-accessible", "AA contrast everywhere"],
+    "donts": ["generic centered-hero + dual-CTA silhouette", "serif/sans heading split", "invented copy or stats"]
+  }
+}

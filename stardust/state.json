@@ -1,0 +1,112 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:direct",
+    "writtenAt": "2026-09-24T13:00:00.000Z",
+    "stardustVersion": "0.10.0"
+  },
+  "site": {
+    "originUrl": "https://customcritical.fedex.com",
+    "deployUrl": null,
+    "extractedAt": "2026-09-24T12:42:22.844Z",
+    "pageCap": 4,
+    "totalDiscovered": 4,
+    "crawled": 4
+  },
+  "direction": {
+    "resolvedAt": "2026-09-24T13:00:00.000Z",
+    "phrase": "Modern, brand-faithful visual refresh that keeps all existing copy faithful and consolidates four owner/operator pages into one (intro hero, tabs Programs/Communications/Online Tools, FAQ accordion, bottom contact block). Keep FedEx purple #4D148C + orange #FF6600. ia-fidelity reimagined; content verbatim.",
+    "directionFile": "stardust/direction.md",
+    "iaFidelity": "reimagined"
+  },
+  "pages": [
+    {
+      "slug": "owneroperator",
+      "url": "https://customcritical.fedex.com/us/owneroperator/default.shtml",
+      "title": "Expedite Owner Operators, Expedited Transportation, Independent Contractors",
+      "type": "landing",
+      "status": "prototyped",
+      "history": [
+        { "status": "extracted", "at": "2026-09-24T12:42:22.844Z" },
+        { "status": "directed", "at": "2026-09-24T13:00:00.000Z" },
+        { "status": "prototyped", "at": "2026-09-24T13:15:00.000Z" }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/us-owneroperator-default-shtml.json",
+      "prototypePath": "stardust/prototypes/owneroperator-proposed.html",
+      "migratedPath": null,
+      "consolidates": [
+        "stardust/current/pages/us-owneroperator-overview-default-shtml.json",
+        "stardust/current/pages/us-owneroperator-advantages-default-shtml.json",
+        "stardust/current/pages/us-owneroperator-faqs-default-shtml.json"
+      ]
+    },
+    {
+      "slug": "qualifications-specs",
+      "url": "https://customcritical.fedex.com/us/owneroperator/quals/default.shtml",
+      "title": "FedEx Custom Critical | Owner Operators | Qualifications & Specifications",
+      "type": "landing",
+      "status": "prototyped",
+      "history": [
+        { "status": "extracted", "at": "2026-09-24T13:40:00.000Z" },
+        { "status": "directed", "at": "2026-09-24T13:40:00.000Z" },
+        { "status": "prototyped", "at": "2026-09-24T13:55:00.000Z" }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/us-owneroperator-quals-default-shtml.json",
+      "prototypePath": "stardust/prototypes/qualifications-specs-proposed.html",
+      "migratedPath": null,
+      "consolidates": [
+        "stardust/current/pages/us-owneroperator-quals-smstrtrk-shtml.json",
+        "stardust/current/pages/us-owneroperator-quals-lgstrtrk-shtml.json",
+        "stardust/current/pages/us-owneroperator-quals-tractortrailer-shtml.json"
+      ]
+    },
+    {
+      "slug": "owneroperator-overview",
+      "url": "https://customcritical.fedex.com/us/owneroperator/overview/default.shtml",
+      "title": "FedEx Custom Critical | Owner Operators | Overview & Advantages",
+      "type": "static",
+      "status": "extracted",
+      "history": [
+        { "status": "extracted", "at": "2026-09-24T12:42:22.844Z" }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/us-owneroperator-overview-default-shtml.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "owneroperator-advantages",
+      "url": "https://customcritical.fedex.com/us/owneroperator/advantages/default.shtml",
+      "title": "FedEx Custom Critical | Owner Operators | Advantages",
+      "type": "static",
+      "status": "extracted",
+      "history": [
+        { "status": "extracted", "at": "2026-09-24T12:42:22.844Z" }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/us-owneroperator-advantages-default-shtml.json",
+      "prototypePath": null,
+      "migratedPath": null
+    },
+    {
+      "slug": "owneroperator-faqs",
+      "url": "https://customcritical.fedex.com/us/owneroperator/faqs/default.shtml",
+      "title": "FedEx Custom Critical | Owner Operators | FAQs",
+      "type": "static",
+      "status": "extracted",
+      "history": [
+        { "status": "extracted", "at": "2026-09-24T12:42:22.844Z" }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/us-owneroperator-faqs-default-shtml.json",
+      "prototypePath": null,
+      "migratedPath": null
+    }
+  ]
+}

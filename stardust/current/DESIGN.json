@@ -1,0 +1,52 @@
+{
+  "_provenance": {
+    "authoredBy": "stardust:extract",
+    "kind": "current-state-descriptive",
+    "originUrl": "https://customcritical.fedex.com/us/owneroperator/default.shtml",
+    "fetchedAt": "2026-09-24T12:42:22.844Z"
+  },
+  "colors": {
+    "primary": "#4D148C",
+    "accent": "#FF6600",
+    "background": "#FFFFFF",
+    "surface": "#F2F2F2",
+    "surface-alt": "#FAFAFA",
+    "text": "#000000",
+    "text-muted": "#58595B",
+    "link": "#0000EE",
+    "link-alt": "#0099CC"
+  },
+  "typography": {
+    "heading": "\"Times New Roman\", serif",
+    "body": "Roboto, sans-serif",
+    "scaleKind": "ad-hoc"
+  },
+  "rounded": "0px",
+  "spacing": "ad-hoc",
+  "components": ["masthead", "full-bleed banner", "text-link nav tree", "icon callout", "image+heading+lede card", "footer"],
+  "extensions": {
+    "componentStyle": {
+      "header": "FedEx purple masthead with logo, dropdown nav, search",
+      "banner": "full-bleed 745x150 photo banner at top of content",
+      "callout": "circular info icon + bold heading ('Additional information') + text-link list",
+      "contentCard": "left-aligned image, bold heading, one-line lede, single text link",
+      "footer": "grey link columns + social row + purple legal bar"
+    },
+    "motifs": {
+      "borderRadius": "0px",
+      "shadows": ["rgba(0, 0, 0, 0.17) 4px 4px 0px 0px"],
+      "gradients": []
+    },
+    "voice": {
+      "heroHeadline": "Owner Operators",
+      "heroLede": "The FedEx Custom Critical fleet is made up entirely of owner operators. If you own your vehicle, or have plans to purchase one, read on to learn about your opportunity as an independent contractor.",
+      "ctaSamples": ["Find out more", "See the requirements", "Owner-Operator opportunities", "CDL driver opportunities"]
+    },
+    "tensions": [
+      "Times New Roman headings vs Roboto body — no coherent scale",
+      "default-blue vs teal in-content links",
+      "raw SSI error string rendered on homepage",
+      "content fragmented across four .shtml pages"
+    ]
+  }
+}

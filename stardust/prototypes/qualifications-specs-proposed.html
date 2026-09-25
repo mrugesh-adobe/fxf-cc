@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="application/json" id="_provenance">
+{
+  "authoredBy": "impeccable:craft (via stardust:prototype)",
+  "slug": "qualifications-specs",
+  "mode": "Mode A brand-faithful + Mode A+ (Roboto headings, unified links)",
+  "againstDirection": "stardust/direction.md",
+  "shapeBrief": "stardust/prototypes/qualifications-specs-shape.md",
+  "contentSources": [
+    "stardust/current/pages/us-owneroperator-quals-default-shtml.json",
+    "stardust/current/pages/us-owneroperator-quals-smstrtrk-shtml.json",
+    "stardust/current/pages/us-owneroperator-quals-lgstrtrk-shtml.json",
+    "stardust/current/pages/us-owneroperator-quals-tractortrailer-shtml.json"
+  ],
+  "voiceClassification": "all body copy captured-verbatim",
+  "copyCadenceBypass": { "rules": ["em-dash-overuse", "marketing-buzzword"], "basis": "captured-verbatim FedEx compliance/spec copy" },
+  "dedupNote": "Driving-record (A) + criminal-background (C) + emergency-equipment are identical across trucks and rendered once; only CDL policy (B) and specs differ per truck.",
+  "unsourcedContent": [],
+  "fidelity": "refined"
+}
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FedEx Custom Critical | Qualifications &amp; Specifications</title>
+<meta name="description" content="FedEx Custom Critical owner-operator qualifications and specifications for small straight trucks, large straight trucks, and tractor-trailers.">
+<style>
+:root{
+  --ink:#1A1A1A;
+  --purple:#4D148C;
+  --purple-deep:#37096B;
+  --orange:#FF6600;
+  --orange-deep:#E25100;
+  --paper:#FFFFFF;
+  --fog:#F4F2F7;
+  --hair:#E2DEE9;
+  --slate:#58595B;
+  --font:"Roboto","Helvetica Neue",system-ui,-apple-system,Arial,sans-serif;
+  --t-xs:.79rem; --t-sm:.889rem; --t-base:1rem; --t-md:1.125rem;
+  --t-lg:1.5rem; --t-xl:1.953rem; --t-2xl:2.441rem; --t-3xl:3.052rem;
+  --sp-1:.25rem; --sp-2:.5rem; --sp-3:.75rem; --sp-4:1rem;
+  --sp-6:1.5rem; --sp-8:2rem; --sp-12:3rem; --sp-16:4rem;
+  --radius:6px;
+  --shadow-card:0 1px 3px rgba(77,20,140,.12);
+  --shadow-raise:0 6px 20px rgba(77,20,140,.14);
+  --wrap:1160px;
+  --measure:72ch;
+  --section-pad:64px;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{margin:0;font-family:var(--font);font-size:var(--t-base);line-height:1.6;color:var(--ink);background:var(--paper);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4{font-family:var(--font);line-height:1.15;text-wrap:balance;margin:0;color:var(--purple-deep);letter-spacing:-.02em;}
+h1{font-size:var(--t-3xl);font-weight:900;}
+h2{font-size:var(--t-2xl);font-weight:800;}
+h3{font-size:var(--t-lg);font-weight:700;letter-spacing:-.01em;}
+h4{font-size:var(--t-md);font-weight:700;color:var(--ink);letter-spacing:0;}
+p{margin:0 0 var(--sp-4);max-width:var(--measure);}
+a{color:var(--purple);text-underline-offset:2px;}
+a:hover,a:focus-visible{color:var(--orange-deep);}
+ul{margin:0 0 var(--sp-4);padding-left:1.25rem;}
+li{margin:0 0 var(--sp-2);max-width:var(--measure);}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px;border-radius:3px;}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--sp-6);}
+.skip{position:absolute;left:-9999px;top:0;background:var(--paper);color:var(--purple-deep);padding:var(--sp-3) var(--sp-4);z-index:100;font-weight:700;}
+.skip:focus{left:var(--sp-4);top:var(--sp-4);}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-size:var(--t-base);font-weight:700;line-height:1;padding:.85rem 1.4rem;border-radius:var(--radius);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease,transform .18s ease;}
+.btn-primary{background:var(--orange);color:#fff;}
+.btn-primary:hover,.btn-primary:focus-visible{background:var(--orange-deep);color:#fff;transform:translateY(-1px);}
+.btn-secondary{background:transparent;color:var(--purple-deep);border-color:var(--purple);}
+.btn-secondary:hover,.btn-secondary:focus-visible{background:var(--purple);color:#fff;}
+
+/* Header */
+.masthead{background:var(--purple);color:#fff;}
+.masthead .wrap{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:var(--sp-6);position:relative;}
+.brand{display:flex;align-items:baseline;gap:.5rem;text-decoration:none;color:#fff;font-weight:900;font-size:var(--t-lg);letter-spacing:-.02em;}
+.brand .ex{color:var(--orange);}
+.brand .cc{font-size:var(--t-sm);font-weight:500;letter-spacing:.02em;opacity:.9;align-self:center;}
+.mainnav{display:flex;gap:var(--sp-6);list-style:none;margin:0;padding:0;}
+.mainnav a{color:#fff;text-decoration:none;font-weight:500;font-size:var(--t-sm);padding:.4rem 0;border-bottom:2px solid transparent;}
+.mainnav a:hover,.mainnav a:focus-visible{color:#fff;border-bottom-color:var(--orange);}
+.nav-toggle{display:none;background:none;border:0;color:#fff;font-size:1.5rem;cursor:pointer;padding:.25rem .5rem;}
+
+/* Hero */
+.hero{border-bottom:1px solid var(--hair);}
+.hero-inner{padding:var(--section-pad) 0;}
+.hero h1{margin-bottom:var(--sp-4);max-width:16ch;}
+.hero .lede{font-size:var(--t-md);color:var(--ink);}
+.minimums{list-style:none;padding:0;margin:0 0 var(--sp-6);display:grid;gap:var(--sp-2);}
+.minimums li{max-width:var(--measure);padding-left:1.75rem;position:relative;}
+.minimums li::before{content:"";position:absolute;left:0;top:.55em;width:.65rem;height:.65rem;background:var(--orange);border-radius:2px;}
+.hero .follow{color:var(--slate);}
+.hero-actions{display:flex;flex-wrap:wrap;gap:var(--sp-3);margin-top:var(--sp-6);}
+
+/* Section head */
+.section{padding:var(--section-pad) 0;}
+.section-head{margin-bottom:var(--sp-8);}
+.section-head h2{position:relative;padding-left:var(--sp-4);}
+.section-head h2::before{content:"";position:absolute;left:0;top:.1em;bottom:.1em;width:5px;background:var(--purple);border-radius:3px;}
+.section-head p{color:var(--slate);margin-top:var(--sp-3);}
+
+/* Tabs */
+.tabs{background:var(--fog);}
+.tablist{display:flex;gap:var(--sp-2);border-bottom:1px solid var(--hair);flex-wrap:wrap;}
+.tab{appearance:none;background:none;border:0;border-bottom:3px solid transparent;font-family:var(--font);font-size:var(--t-md);font-weight:700;color:var(--slate);padding:.85rem 1.1rem;margin-bottom:-1px;cursor:pointer;transition:color .15s ease,border-color .15s ease;}
+.tab:hover{color:var(--purple-deep);}
+.tab[aria-selected="true"]{color:var(--purple-deep);border-bottom-color:var(--purple);}
+.tabpanel{padding:var(--sp-8) 0 0;}
+.tabpanel[hidden]{display:none;}
+
+/* Qual blocks */
+.qual-block{margin-bottom:var(--sp-12);}
+.qual-block > h3{margin-bottom:var(--sp-4);padding-bottom:var(--sp-2);border-bottom:2px solid var(--hair);}
+.scope-tag{display:inline-block;font-size:var(--t-xs);font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--purple-deep);background:#fff;border:1px solid var(--hair);border-radius:100px;padding:.2rem .7rem;margin-left:.5rem;vertical-align:middle;}
+.rule-group{margin:0 0 var(--sp-6);}
+.rule-group > p{font-weight:500;color:var(--ink);margin-bottom:var(--sp-2);}
+.rule-group ul{color:var(--slate);}
+.rule-group ul ul{margin-top:var(--sp-2);}
+
+/* Truck rows (CDL) */
+.truck-rows{display:grid;gap:var(--sp-4);}
+.truck-row{background:#fff;border:1px solid var(--hair);border-radius:var(--radius);box-shadow:var(--shadow-card);padding:var(--sp-6);}
+.truck-row h4{color:var(--purple-deep);margin-bottom:var(--sp-2);}
+.truck-row p{color:var(--slate);margin:0;max-width:none;}
+
+/* Spec cards */
+.spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-6);margin-top:var(--sp-6);}
+.spec-card{background:#fff;border:1px solid var(--hair);border-radius:var(--radius);box-shadow:var(--shadow-card);padding:var(--sp-6);}
+.spec-card h4{color:var(--purple-deep);margin-bottom:var(--sp-3);padding-bottom:var(--sp-2);border-bottom:2px solid var(--orange);}
+.spec-card ul{padding-left:1.1rem;color:var(--slate);font-size:var(--t-sm);}
+.spec-card .sub{font-weight:700;color:var(--ink);font-size:var(--t-sm);margin:var(--sp-3) 0 var(--sp-1);}
+.equip{background:#fff;border:1px solid var(--hair);border-radius:var(--radius);padding:var(--sp-6);margin-top:var(--sp-4);}
+.equip h4{color:var(--purple-deep);margin-bottom:var(--sp-3);}
+.equip ul{color:var(--slate);columns:2;column-gap:var(--sp-8);}
+
+/* Contact */
+.contact{background:var(--purple);color:#fff;}
+.contact .section-head h2{color:#fff;}
+.contact .section-head h2::before{background:var(--orange);}
+.contact-grid{display:grid;grid-template-columns:auto 1fr;gap:var(--sp-6) var(--sp-8);align-items:start;}
+.contact-phone{font-size:var(--t-xl);font-weight:900;color:#fff;text-decoration:none;white-space:nowrap;}
+.contact-phone:hover,.contact-phone:focus-visible{color:var(--orange);}
+.contact-label{color:rgba(255,255,255,.75);font-size:var(--t-sm);margin:0;}
+.contact-actions{display:flex;flex-wrap:wrap;gap:var(--sp-3);}
+.contact .btn-secondary{color:#fff;border-color:rgba(255,255,255,.6);}
+.contact .btn-secondary:hover,.contact .btn-secondary:focus-visible{background:#fff;color:var(--purple-deep);border-color:#fff;}
+
+/* Footer */
+.footer{background:#fff;border-top:1px solid var(--hair);padding:var(--sp-12) 0;}
+.footer-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-8);}
+.footer-cols h4{color:var(--purple-deep);font-size:var(--t-sm);text-transform:uppercase;letter-spacing:.06em;margin-bottom:var(--sp-3);}
+.footer-cols ul{list-style:none;padding:0;margin:0;}
+.footer-cols li{margin-bottom:var(--sp-2);}
+.footer-cols a{color:var(--slate);text-decoration:none;font-size:var(--t-sm);}
+.footer-cols a:hover{color:var(--orange-deep);}
+.legal{background:var(--purple);color:rgba(255,255,255,.85);}
+.legal .wrap{display:flex;flex-wrap:wrap;gap:var(--sp-4);justify-content:space-between;padding-top:var(--sp-4);padding-bottom:var(--sp-4);font-size:var(--t-xs);}
+.legal a{color:rgba(255,255,255,.85);text-decoration:none;}
+.legal a:hover{color:#fff;}
+.legal-links{display:flex;flex-wrap:wrap;gap:var(--sp-4);}
+
+@media (max-width:900px){
+  :root{--section-pad:48px;}
+  .spec-grid{grid-template-columns:1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .equip ul{columns:1;}
+}
+@media (max-width:640px){
+  :root{--section-pad:32px;}
+  h1{font-size:var(--t-2xl);}
+  h2{font-size:var(--t-xl);}
+  .nav-toggle{display:block;}
+  .mainnav{display:none;position:absolute;left:0;right:0;top:68px;flex-direction:column;gap:0;background:var(--purple-deep);padding:var(--sp-2) var(--sp-6);z-index:50;}
+  .masthead.open .mainnav{display:flex;}
+  .mainnav a{padding:.7rem 0;border-bottom:1px solid rgba(255,255,255,.12);}
+  .tab{padding:.7rem .6rem;font-size:var(--t-base);}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead" id="masthead" data-section="header">
+  <div class="wrap">
+    <a class="brand" href="#main"><b>Fed<span class="ex">Ex</span></b> <span class="cc">Custom Critical</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mainnav" aria-label="Toggle navigation">&#9776;</button>
+    <nav aria-label="Primary">
+      <ul class="mainnav" id="mainnav">
+        <li><a href="#quals-specs">Qualifications &amp; Specs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero" data-section="hero">
+    <div class="wrap hero-inner">
+      <h1>Qualifications &amp; Specifications</h1>
+      <p class="lede">Interested in being affiliated with FedEx Custom Critical? If you meet these general minimum requirements, then we'd like to hear from you:</p>
+      <ul class="minimums">
+        <li>No more than two (2) moving violations within the last three (3) years, and a maximum of one (1) in the previous 12 months</li>
+        <li>Able to pass a Department of Transportation physical and drug test</li>
+        <li>A proper class CDL</li>
+      </ul>
+      <p class="follow">In order to contract with or drive for a contractor of FedEx Custom Critical, you must meet certain other eligibility requirements. These vary based on the size and type of vehicle: Small Straight Trucks, Large Straight Trucks, and Tractor Trailers.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://intelliapp.driverapponline.com/m/fedexcc?r=fccwebnav">Owner-Operator opportunities</a>
+        <a class="btn btn-secondary" href="tel:18667113599">Call 1.866.711.3599</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <section class="section tabs" id="quals-specs" data-section="tabs" data-block="tabs">
+    <div class="wrap">
+      <div class="tablist" role="tablist" aria-label="Qualifications and Specifications">
+        <button class="tab" role="tab" id="tab-quals" aria-selected="true" aria-controls="panel-quals" tabindex="0">Qualifications</button>
+        <button class="tab" role="tab" id="tab-specs" aria-selected="false" aria-controls="panel-specs" tabindex="-1">Specifications</button>
+      </div>
+
+      <!-- Qualifications panel -->
+      <div class="tabpanel" role="tabpanel" id="panel-quals" aria-labelledby="tab-quals" tabindex="0">
+
+        <div class="qual-block">
+          <h3>Driving record <span class="scope-tag">Applies to all vehicle types</span></h3>
+          <div class="rule-group">
+            <ul>
+              <li>No record of a preventable accident resulting in a fatality or serious injury or payout greater than $100,000.</li>
+            </ul>
+          </div>
+          <div class="rule-group">
+            <p>No record, citation or conviction during the one-year period prior to the application date of:</p>
+            <ul>
+              <li>Using a handheld mobile phone or texting while driving a commercial motor vehicle (CMV)</li>
+              <li>Failing to properly wear a seatbelt in a CMV, whether as a driver or as a passenger</li>
+              <li>More than one (1) instance under the Federal Motor Carrier Safety Administration&rsquo;s Compliance, Safety, Accountability (CSA) program&rsquo;s Unsafe Driving BASIC, under any of the following Groups: Dangerous Driving, Speeding 3, or Speeding 4, only to include work or construction zone</li>
+              <li>Any instance under the Federal Motor Carrier Safety Administration&rsquo;s Compliance, Safety, Accountability (CSA) program&rsquo;s Hazardous Materials Compliance BASIC under Group: Load Securement-Hazmat and Unsafe Driving BASIC, under any of the following groups: Texting, Phone Call, or Seat Belt</li>
+            </ul>
+          </div>
+          <div class="rule-group">
+            <p>No record, citation or conviction during the thirty-six (36) consecutive months prior to the application date of:</p>
+            <ul>
+              <li>More than two (2) moving violations</li>
+              <li>More than one (1) preventable accident, or more than one (1) preventable accident and (1) moving violation in any combination</li>
+              <li>Operating a vehicle without a valid license or improper license, including operating a vehicle while a license is expired or under suspension, revocation or cancellation</li>
+              <li>Offenses resulting in more than one (1) driver's license suspension for moving violations thirty (30) days or more for moving violations</li>
+              <li>Reckless, aggressive or careless endangerment of any vehicle</li>
+              <li>Any instance of exceeding the posted speed limit by 15 m.p.h. or more</li>
+              <li>Operating a CMV when not medically certified</li>
+              <li>Operating a vehicle that contains alcoholic beverages, drugs or controlled substances contrary to law</li>
+              <li>Any offense resulting in suspension of driving privileges due to excessive or serious moving violations</li>
+              <li>Violating an out-of-service order issued by any law enforcement official</li>
+              <li>Falsifying any document related to DOT compliance</li>
+              <li>Carrying or transporting unauthorized passengers in a CMV</li>
+              <li>Any instance under the Federal Motor Carrier Safety Administration's Compliance, Safety, Accountability (CSA) program's Driver Fitness BASIC under Group: Fitness/Jumping OOS or Fraud, or Hours of Service BASIC under Group: Jumping OOS/Driver Fatigued</li>
+            </ul>
+          </div>
+          <div class="rule-group">
+            <p>No record, citation or conviction during the sixty (60) months prior to the application date of:</p>
+            <ul>
+              <li>Operating any vehicle while unlawfully under the influence of alcohol, drugs or controlled substances</li>
+              <li>Failure to submit to or pass drug, controlled substance or alcohol testing mandated by the U.S. Department of Transportation (DOT) or requested by any law enforcement official in connection with the operation of any vehicle</li>
+              <li>Failure to stop or remain at the scene of an accident in connection with the operation of any vehicle</li>
+              <li>Failure to yield to a school bus while operating any vehicle and causing an accident</li>
+              <li>Failure to yield for a railroad crossing while transporting hazardous materials in a CMV</li>
+              <li>Fleeing or attempting to elude a law enforcement official in any vehicle</li>
+              <li>Using any vehicle in connection with the commission of a felony</li>
+              <li>An excessive pattern of moving violations, defined as five (5) or more during the sixty (60) months prior to the application date</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="qual-block">
+          <h3>Commercial Driver's License policy</h3>
+          <div class="truck-rows">
+            <div class="truck-row">
+              <h4>Small Straight Trucks</h4>
+              <p>Drivers of 14' or 22' straight trucks must have an unrestricted class B (or class A) commercial driver's license (CDL). Learner's permits or restricted licenses are not acceptable for drivers of FedEx Custom Critical leased vehicles. Canadian contractors: please ensure drivers of leased vehicle has a class G CDL rated for a GVW greater than the GVW of your vehicle.</p>
+            </div>
+            <div class="truck-row">
+              <h4>Large Straight Trucks</h4>
+              <p>Drivers of 14' or 22' straight trucks must have an unrestricted class B (or class A) commercial driver's license (CDL). Learner's permits or restricted licenses are not acceptable for drivers of FedEx Custom Critical leased vehicles. Canadian contractors: please ensure drivers of leased vehicle has a class G CDL rated for a GVW greater than the GVW of your vehicle.</p>
+            </div>
+            <div class="truck-row">
+              <h4>Tractor Trailers</h4>
+              <p>Every driver of a tractor-trailer leased to FedEx Custom Critical must have an unrestricted class A commercial driver's license (CDL). Learner's permits or restricted licenses are not acceptable for drivers operating vehicles leased to FedEx Custom Critical. Canadian contractors: please ensure drivers of leased vehicle has a class G CDL rated for a GVW greater than the GVW of your vehicle.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="qual-block">
+          <h3>Criminal background <span class="scope-tag">Applies to all vehicle types</span></h3>
+          <ul>
+            <li>Felony — no less than seven (7) years from the date of clearance. (Clearance would be the completion of probation, parole, incarceration or court-ordered diversion program relating to felony.)</li>
+            <li>DUI/DWI — no less than five (5) years</li>
+            <li>Misdemeanor — no less than three (3) years</li>
+            <li>An individual will not be qualified if they have been convicted of a crime related to sexual abuse and have an active court order mandating registration as a sexual offender.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Specifications panel -->
+      <div class="tabpanel" role="tabpanel" id="panel-specs" aria-labelledby="tab-specs" tabindex="0" hidden>
+        <p>At FedEx Custom Critical, we contract with owners of Small Straight Trucks, Large Straight Trucks, and Tractor Trailers.</p>
+
+        <div class="equip">
+          <h4>Required emergency equipment <span class="scope-tag">Applies to all vehicle types</span></h4>
+          <ul>
+            <li>Fire extinguisher (type 10 B.C.) charged and mounted</li>
+            <li>Spare fuses (for electric circuits)</li>
+            <li>Three warning devices (flame-producing devices prohibited)</li>
+            <li>Bidirectional emergency reflective triangles must have manufacturer's certification of compliance</li>
+            <li>Safety goggles</li>
+            <li>Steel-toe shoes</li>
+          </ul>
+        </div>
+
+        <div class="spec-grid">
+          <div class="spec-card">
+            <h4>Small Straight Trucks</h4>
+            <ul>
+              <li>Unit must be able to legally scale 5,000-pound payload</li>
+              <li>Box floor must be dock high, 48-52" from the ground</li>
+              <li>Inside dimensions must be 90" wide x 92" high</li>
+              <li>Rear door opening must be minimum 88" high, 85" wide (roll up or swing doors are optional)</li>
+              <li>Safety support legs at the rear of the frame of the unit (minimum rating 25,000 pounds)</li>
+              <li>Legal sleeper between cab and box</li>
+              <li>Box must be white</li>
+              <li>Vehicles must be no more than five years old from date of manufacture.</li>
+            </ul>
+            <p class="sub">Freight Securement</p>
+            <ul>
+              <li>Two rows E-Trac (one at floor level, one at 36" above floor at each side)</li>
+              <li>Four E-Trac ratcheting straps</li>
+              <li>Two E-Trac shoring beams</li>
+              <li>Four four-foot pieces of 2x4</li>
+              <li>Hammer and nails</li>
+              <li>Cargo door lock</li>
+            </ul>
+          </div>
+
+          <div class="spec-card">
+            <h4>Large Straight Trucks</h4>
+            <ul>
+              <li>Unit must be able to legally scale 13,000-pound payload</li>
+              <li>Box floor must be dock high, 48-52" from the ground</li>
+              <li>Inside dimensions must be 90" wide x 92" high</li>
+              <li>Rear door opening must be minimum 88" high, 85" wide (roll up or swing doors are optional)</li>
+              <li>Safety support legs at rear of frame of unit (minimum rating 35,000 pounds)</li>
+              <li>Legal sleeper between cab and box</li>
+              <li>Box must be white</li>
+              <li>Vehicles must be no more than five years old from date of manufacture.</li>
+            </ul>
+            <p class="sub">Freight Securement</p>
+            <ul>
+              <li>Two rows E-Trac (one at floor level, one at 36" above floor at each side)</li>
+              <li>Four E-Trac ratcheting straps</li>
+              <li>Two E-Trac shoring beams</li>
+              <li>Four four-foot pieces of 2x4</li>
+              <li>Cargo door lock</li>
+            </ul>
+          </div>
+
+          <div class="spec-card">
+            <h4>Tractor Trailers</h4>
+            <ul>
+              <li>Cargo payload capacity of 44,000 pounds</li>
+              <li>Eight model years old or less</li>
+              <li>Must have a total of four tire chains in truck</li>
+            </ul>
+            <p class="sub">Freight Securement</p>
+            <ul>
+              <li>Two rows E-Trac (one at floor level, on at 36" above floor at each side)</li>
+              <li>Four E-Trac ratcheting straps</li>
+              <li>Four four-foot 2x4s</li>
+              <li>Four tire chains</li>
+              <li>Four E-Trac shoring beams</li>
+              <li>Hammer and nails</li>
+              <li>Cargo door lock</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact" data-section="contact">
+    <div class="wrap">
+      <div class="section-head"><h2>Additional information</h2></div>
+      <div class="contact-grid">
+        <div>
+          <p class="contact-label">Call us now at</p>
+          <a class="contact-phone" href="tel:18667113599">1.866.711.3599</a>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="https://intelliapp.driverapponline.com/m/fedexcc?r=fccwebnav">Owner-Operator opportunities</a>
+          <a class="btn btn-secondary" href="https://intelliapp.driverapponline.com/m/fedexccfleetdriver?r=fccwebnav">CDL driver opportunities</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" data-section="footer">
+  <div class="wrap">
+    <div class="footer-cols">
+      <div>
+        <h4>Our Company</h4>
+        <ul>
+          <li><a href="https://www.fedex.com/en-us/about.html">About FedEx</a></li>
+          <li><a href="https://www.fedex.com/en-us/about/company-structure.html">Our Portfolio</a></li>
+          <li><a href="https://investors.fedex.com/">Investor Relations</a></li>
+          <li><a href="https://careers.fedex.com/">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More From FedEx</h4>
+        <ul>
+          <li><a href="https://www.fedex.com/en-us/shipping.html">Freight Shipping</a></li>
+          <li><a href="https://www.fedex.com/en-us/healthcare.html">FedEx Healthcare Solutions</a></li>
+          <li><a href="https://www.fedex.com/en-us/logistics.html">FedEx Logistics</a></li>
+          <li><a href="https://newsroom.fedex.com/">FedEx Newsroom</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Owner Operators</h4>
+        <ul>
+          <li><a href="#quals-specs">Qualifications &amp; Specifications</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="legal">
+    <div class="wrap">
+      <span>&copy; FedEx 1995-2026</span>
+      <span class="legal-links">
+        <a href="#">Site Map</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy &amp; Security</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var mast=document.getElementById('masthead');
+  var toggle=mast.querySelector('.nav-toggle');
+  toggle.addEventListener('click',function(){
+    var open=mast.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+  });
+  var tablist=document.querySelector('.tablist');
+  var tabs=Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  function selectTab(tab){
+    tabs.forEach(function(t){
+      var sel=t===tab;
+      t.setAttribute('aria-selected',sel?'true':'false');
+      t.tabIndex=sel?0:-1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden=!sel;
+    });
+  }
+  tablist.addEventListener('click',function(e){var tab=e.target.closest('.tab');if(tab)selectTab(tab);});
+  tablist.addEventListener('keydown',function(e){
+    var i=tabs.indexOf(document.activeElement);if(i<0)return;var n=null;
+    if(e.key==='ArrowRight')n=tabs[(i+1)%tabs.length];
+    else if(e.key==='ArrowLeft')n=tabs[(i-1+tabs.length)%tabs.length];
+    else if(e.key==='Home')n=tabs[0];
+    else if(e.key==='End')n=tabs[tabs.length-1];
+    if(n){e.preventDefault();selectTab(n);n.focus();}
+  });
+})();
+</script>
+</body>
+</html>

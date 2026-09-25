@@ -1,0 +1,9 @@
+{
+  "runtime": "vanilla-eds",
+  "blockWrapperClass": "block",
+  "buttonClasses": ".button / .button.primary (strong) / .button.secondary (em) / .button.accent (em+strong), in p.button-wrapper",
+  "buttonization": "formatted-only",
+  "fragmentScriptPolicy": "inert-innerHTML",
+  "emptySectionCollapse": false,
+  "notes": "Confirmed from scripts/scripts.js decorateButtons (p a[href], requires <strong>/<em>) and blocks/tabs+accordion using Block Collection model. New page uses opp-prefixed blocks to avoid restyling the 8 live pages that share hero-banner/tabs/accordion/cards-feature."
+}

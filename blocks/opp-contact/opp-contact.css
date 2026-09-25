@@ -1,0 +1,93 @@
+/* opp-contact — "Additional information" purple band, prototype-styled. */
+
+.opp-contact {
+  background: var(--fxcc-purple, rgb(77 20 140));
+  color: #fff;
+  border-radius: 6px;
+  padding: 40px;
+}
+
+.opp-contact .opp-contact-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px 32px;
+  align-items: center;
+}
+
+.opp-contact .opp-contact-phone-group {
+  color: rgb(255 255 255 / 85%);
+  font-size: 14px;
+}
+
+.opp-contact .opp-contact-phone-group p {
+  margin: 0;
+  color: rgb(255 255 255 / 85%);
+}
+
+.opp-contact a.opp-contact-phone {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 900;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.opp-contact a.opp-contact-phone:hover,
+.opp-contact a.opp-contact-phone:focus-visible {
+  color: var(--fxcc-orange, rgb(255 102 0));
+}
+
+.opp-contact .opp-contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* prototype buttons, scoped here so the site-wide grey button is untouched */
+.opp-contact a.button:any-link {
+  border-radius: 6px;
+  padding: 0.85rem 1.4rem;
+  font-weight: 700;
+}
+
+.opp-contact a.button.primary {
+  border-color: var(--fxcc-orange, rgb(255 102 0));
+  background-color: var(--fxcc-orange, rgb(255 102 0));
+  color: #fff;
+}
+
+.opp-contact a.button.primary:hover,
+.opp-contact a.button.primary:focus-visible {
+  border-color: var(--fxcc-orange-deep, #e25100);
+  background-color: var(--fxcc-orange-deep, #e25100);
+  color: #fff;
+}
+
+/* on-purple button overrides (secondary needs a light outline) */
+.opp-contact a.button.secondary {
+  color: #fff;
+  border-color: rgb(255 255 255 / 60%);
+}
+
+.opp-contact a.button.secondary:hover,
+.opp-contact a.button.secondary:focus-visible {
+  background: #fff;
+  color: var(--fxcc-purple-deep, rgb(55 9 107));
+  border-color: #fff;
+}
+
+@media (width <= 900px) {
+  .opp-contact {
+    padding: 28px;
+  }
+
+  .opp-contact .opp-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .opp-contact .opp-contact-actions {
+    justify-content: flex-start;
+  }
+}
