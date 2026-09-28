@@ -138,6 +138,12 @@
   font-size: 14px;
 }
 
+/* ---- variant: lead (first paragraph of each panel is the lead line) ---- */
+.opp-tabs.lead .opp-tabs-panel > div > p:first-child {
+  font-weight: 500;
+  color: var(--fxcc-purple-deep, rgb(55 9 107));
+}
+
 @media (width <= 900px) {
   .opp-tabs.cards .opp-tabs-cards {
     grid-template-columns: 1fr;

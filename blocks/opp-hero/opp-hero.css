@@ -71,6 +71,28 @@
   margin-top: 24px;
 }
 
+/* term list (e.g. divisions): two columns under a hairline, term above text */
+.opp-hero .opp-hero-divisions ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 32px;
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 16px 0 0;
+  border-top: 1px solid rgb(226 222 233);
+}
+
+.opp-hero .opp-hero-divisions li {
+  color: rgb(88 89 91);
+}
+
+.opp-hero .opp-hero-divisions li strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 18px;
+  color: var(--fxcc-purple-deep, rgb(55 9 107));
+}
+
 /* prototype buttons, scoped here so the site-wide grey button is untouched */
 .opp-hero a.button:any-link {
   border-radius: 6px;
@@ -119,11 +141,17 @@
 
 @media (width <= 900px) {
   .opp-hero .opp-hero-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 32px;
   }
 
   .opp-hero .opp-hero-media img {
     max-height: 300px;
+  }
+}
+
+@media (width <= 640px) {
+  .opp-hero .opp-hero-divisions ul {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
