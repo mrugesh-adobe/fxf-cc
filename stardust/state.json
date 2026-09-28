@@ -42,6 +42,29 @@
       ]
     },
     {
+      "slug": "owneroperator-v2",
+      "url": "https://customcritical.fedex.com/us/owneroperator/default.shtml",
+      "title": "FedEx Custom Critical Owner/Operator Opportunities (v2 — adds Overview content)",
+      "type": "landing",
+      "status": "approved",
+      "history": [
+        { "status": "directed", "at": "2026-09-28T09:00:00.000Z" },
+        { "status": "prototyped", "at": "2026-09-28T09:30:00.000Z" },
+        { "status": "approved", "at": "2026-09-28T13:00:00.000Z", "by": "user: \"approve owneroperator-v2\"", "foldBack": "no-op (single-variant revision; page-local content additions)" }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "variantOf": "owneroperator",
+      "currentStatePath": "stardust/current/pages/us-owneroperator-default-shtml.json",
+      "prototypePath": "stardust/prototypes/owneroperator-v2-proposed.html",
+      "migratedPath": null,
+      "consolidates": [
+        "stardust/current/pages/us-owneroperator-overview-default-shtml.json",
+        "stardust/current/pages/us-owneroperator-advantages-default-shtml.json",
+        "stardust/current/pages/us-owneroperator-faqs-default-shtml.json"
+      ]
+    },
+    {
       "slug": "qualifications-specs",
       "url": "https://customcritical.fedex.com/us/owneroperator/quals/default.shtml",
       "title": "FedEx Custom Critical | Owner Operators | Qualifications & Specifications",

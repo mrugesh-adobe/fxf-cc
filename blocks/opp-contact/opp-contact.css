@@ -45,6 +45,41 @@
   justify-content: flex-end;
 }
 
+/* plain links under the buttons (e.g. extranet login), full row under a divider */
+.opp-contact .opp-contact-extra {
+  grid-column: 1 / -1;
+  padding-top: 24px;
+  border-top: 1px solid rgb(255 255 255 / 20%);
+}
+
+.opp-contact .opp-contact-extra p {
+  margin: 0;
+  max-width: 68ch;
+}
+
+.opp-contact .opp-contact-extra a:any-link {
+  color: rgb(255 255 255 / 85%);
+  text-decoration: none;
+}
+
+.opp-contact .opp-contact-extra a strong {
+  font-size: 18px;
+  color: #fff;
+}
+
+.opp-contact .opp-contact-extra a em {
+  font-style: normal;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.opp-contact .opp-contact-extra a:hover em,
+.opp-contact .opp-contact-extra a:focus-visible em {
+  color: var(--fxcc-orange, rgb(255 102 0));
+}
+
 /* prototype buttons, scoped here so the site-wide grey button is untouched */
 .opp-contact a.button:any-link {
   border-radius: 6px;

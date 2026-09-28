@@ -16,6 +16,9 @@
  * group whose cards hold no list stacks in one column. Authored nodes are
  * moved, never rebuilt.
  *
+ * Variant `lead` (class="opp-tabs lead", CSS only): each panel's first
+ * paragraph is styled as the panel's lead line (purple, medium weight).
+ *
  * @param {Element} block
  */
 function groupCards(cell) {
