@@ -265,12 +265,15 @@ header .nav-overlay.nav-overlay-visible {
     position: fixed;
   }
 
+  /* align the bar's content with <main> (see --page-content-width in styles.css) */
   header nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 0 28px;
-    padding: 0 24px;
+    max-width: none;
+    padding: 0;
+    padding-inline: max(var(--page-gutter, 24px), calc((100% - var(--page-content-width, 922px)) / 2));
   }
 
   header nav .nav-hamburger {

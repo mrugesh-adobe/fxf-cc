@@ -150,6 +150,13 @@ footer .footer-copyright li:last-child {
 
 /* ===== desktop ===== */
 @media (width >= 900px) {
+  /* align footer content with <main> (see --page-content-width in styles.css) */
+  footer .footer-primary,
+  footer .footer-social {
+    max-width: none;
+    padding-inline: max(var(--page-gutter, 20px), calc((100% - var(--page-content-width, 930px)) / 2));
+  }
+
   footer .footer-primary {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 240px));
@@ -179,7 +186,7 @@ footer .footer-copyright li:last-child {
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    padding: 19px max(15px, calc((100% - 970px) / 2));
+    padding: 19px max(var(--page-gutter, 15px), calc((100% - var(--page-content-width, 970px)) / 2));
     text-align: left;
   }
 

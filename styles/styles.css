@@ -13,6 +13,15 @@
  */
 
 :root {
+  /* page content container — the header and footer read these on desktop so
+     their content lines up with <main>: side space =
+     max(gutter, (viewport - content width) / 2). Mirrors `main > .section > div`
+     (1200px content + 32px gutter); the owneroperator template overrides them
+     (990px grid, 15px minimum so chrome never touches the screen edge). Keep in
+     step if either main rule changes. */
+  --page-content-width: 1200px;
+  --page-gutter: 32px;
+
   /* colors — FedEx Custom Critical brand (see brand.css) */
   --background-color: #fff;
   --light-color: rgb(250 250 250);
@@ -317,6 +326,15 @@ main > .section:first-of-type {
 @media (width >= 900px) {
   main > .section > div {
     padding: 0 32px;
+  }
+}
+
+/* owneroperator template pages use a 990px main grid — the header and footer
+   follow it (see --page-content-width in :root). */
+@media (width >= 900px) {
+  body[class*="owneroperator"] {
+    --page-content-width: 990px;
+    --page-gutter: 15px;
   }
 }
 
