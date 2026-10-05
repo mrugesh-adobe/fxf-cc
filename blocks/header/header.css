@@ -1,25 +1,32 @@
-/* FedEx Custom Critical header — solid purple bar, click-triggered dropdowns */
+/* FedEx Freight header — dark charcoal bar with white nav links.
+   Restyled from the FedEx Custom Critical purple header (structure unchanged);
+   colors/typography match fedexfreight.com/en-us (charcoal #333 nav bar over a
+   #565656 utility strip). */
 
 :root {
-  --fxcc-purple: rgb(77 20 140);
+  --fxcc-purple: rgb(77 20 140);          /* retained for reference */
+  --fxf-header-bg: rgb(51 51 51);          /* charcoal nav bar (#333) */
+  --fxf-header-strip: rgb(86 86 86);       /* grey utility strip (#565656) */
+  --fxf-header-text: #fff;                 /* white nav text */
+  --fxf-header-link: #fff;                 /* white nav links */
+  --fxf-header-accent: rgb(0 122 183);     /* FedEx Freight blue (panel landing link) */
   --fxcc-nav-height: 75px;
   --fxcc-submenu-bg: #fff;
-  --fxcc-submenu-link: rgb(51 51 51);       /* dark panel row text (#333) */
-  --fxcc-submenu-accent: rgb(0 131 199);    /* blue "ALL SERVICES" landing row */
+  --fxcc-submenu-link: rgb(51 51 51);      /* dark panel row text (#333) */
 }
 
 /* header and nav layout (mobile-first) */
 
-/* paint purple on the block + wrapper too so the bar is solid before/while the
-   nav decorates (keeps the header legible at rest — never white-on-white) */
+/* dark charcoal header bar (kept solid on block + wrapper so it never flashes
+   white-on-white before the nav decorates) */
 header,
 header .header,
 header .header.block {
-  background-color: var(--fxcc-purple);
+  background-color: var(--fxf-header-bg);
 }
 
 header .nav-wrapper {
-  background-color: var(--fxcc-purple);
+  background-color: var(--fxf-header-bg);
   width: 100%;
   z-index: 20;
   position: fixed;
@@ -44,8 +51,8 @@ header nav {
   font-family: roboto, var(--body-font-family, sans-serif);
   font-size: 12px;
   line-height: normal;
-  color: #fff;
-  background-color: var(--fxcc-purple);
+  color: var(--fxf-header-text);
+  background-color: var(--fxf-header-bg);
 }
 
 header nav[aria-expanded='true'] {
@@ -79,7 +86,7 @@ header nav .nav-hamburger button {
   border-radius: 0;
   padding: 0;
   background: transparent;
-  color: #fff;
+  color: var(--fxf-header-text);
   cursor: pointer;
 }
 
@@ -162,6 +169,9 @@ header nav[aria-expanded='true'] .nav-sections {
   /* full-bleed to the viewport edges: cancel the nav's 20px side padding */
   width: calc(100% + 40px);
   margin: 0 -20px;
+
+  /* dark menu panel (matches FedEx Freight's mobile nav) so white links stay legible */
+  background-color: var(--fxf-header-strip);
 }
 
 header nav .nav-sections ul {
@@ -226,7 +236,7 @@ header nav .nav-search-toggle {
   border: 0;
   padding: 4px;
   margin: 0;
-  color: #fff;
+  color: var(--fxf-header-text);
   cursor: pointer;
   align-items: center;
 }
@@ -241,7 +251,7 @@ header nav .nav-search-form input {
   width: 100%;
   height: 40px;
   padding: 0 14px;
-  border: 0;
+  border: 1px solid rgb(0 0 0 / 20%);
   border-radius: 20px;
   font-size: 14px;
 }
@@ -265,15 +275,12 @@ header .nav-overlay.nav-overlay-visible {
     position: fixed;
   }
 
-  /* align the bar's content with <main> (see --page-content-width in styles.css) */
   header nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 0 28px;
-    max-width: none;
-    padding: 0;
-    padding-inline: max(var(--page-gutter, 24px), calc((100% - var(--page-content-width, 922px)) / 2));
+    padding: 0 24px;
   }
 
   header nav .nav-hamburger {
@@ -313,6 +320,11 @@ header .nav-overlay.nav-overlay-visible {
     font-weight: 400;
     line-height: 14px;
     white-space: nowrap;
+    color: var(--fxf-header-link);
+  }
+
+  header nav .nav-sections > ul > li > a:hover {
+    color: rgb(255 255 255 / 75%);
   }
 
   /* dropdown caret */
@@ -328,7 +340,7 @@ header .nav-overlay.nav-overlay-visible {
     width: 6px;
     height: 6px;
     margin-top: -4px;
-    border: solid #fff;
+    border: solid var(--fxf-header-link);
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
     transition: transform 0.2s ease;
@@ -340,16 +352,18 @@ header .nav-overlay.nav-overlay-visible {
     transform: rotate(-135deg);
   }
 
-  /* caret flips to the brand purple on the white active tab */
+  /* caret flips to a dark chevron on the white active tab */
   header nav .nav-sections > ul > li.nav-drop[aria-expanded='true'] > a::after {
-    border-color: var(--fxcc-purple);
+    border-color: var(--fxcc-submenu-link);
   }
 
-  /* open trigger tab — FedEx Custom Critical raises a WHITE tab with purple
-     text over the purple bar, connecting to the white panel below */
+  /* open trigger tab — FedEx Freight highlights the active tab with a WHITE
+     background + dark text and a dashed outline, connecting to the panel below */
   header nav .nav-sections > ul > li.nav-drop[aria-expanded='true'] > a {
     background: var(--fxcc-submenu-bg);
-    color: var(--fxcc-purple);
+    color: var(--fxcc-submenu-link);
+    outline: 1px dashed rgb(0 0 0 / 45%);
+    outline-offset: -6px;
   }
 
   /* open sub-menu panel — white flyout, flush under the tab */
@@ -374,7 +388,7 @@ header .nav-overlay.nav-overlay-visible {
     border-top: 0;
   }
 
-  /* hairline dividers between panel rows (matches the source dropdown) */
+  /* each row separated by a hairline divider (like the FedEx Freight panel) */
   /* stylelint-disable-next-line no-descending-specificity */
   header nav .nav-sections > ul > li > ul > li + li {
     border-top: 1px solid rgb(0 0 0 / 10%);
@@ -383,7 +397,7 @@ header .nav-overlay.nav-overlay-visible {
   /* stylelint-disable-next-line no-descending-specificity */
   header nav .nav-sections > ul > li > ul > li > a {
     display: block;
-    padding: 16px 20px;
+    padding: 18px 24px;
     font-size: 15px;
     font-weight: 400;
     color: var(--fxcc-submenu-link);
@@ -395,14 +409,14 @@ header .nav-overlay.nav-overlay-visible {
     background: rgb(0 0 0 / 4%);
   }
 
-  /* last row is the section landing link — brand-blue, bold, uppercase
-     (matches the "ALL SERVICES" row in the source dropdown) */
+  /* last row in the panel reads as the section landing link (blue, bold,
+     uppercase) — matches FedEx Freight's "OVERVIEW" row */
   /* stylelint-disable-next-line no-descending-specificity */
   header nav .nav-sections > ul > li > ul > li:last-child > a {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--fxcc-submenu-accent);
+    color: var(--fxf-header-accent);
   }
 
   header nav .nav-tools {

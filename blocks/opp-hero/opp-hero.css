@@ -155,3 +155,462 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Donor pinned: https://www.fedexfreight.com/en-us/services (type, grid, cards, CTAs). */
+/* stylelint-disable no-descending-specificity -- page-specific rules override block defaults. */
+main:has(.opp-hero-media) > .section {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+main:has(.opp-hero-media) > .section.opp-hero-container {
+  padding: 40px 16px 48px;
+  background: var(--ff-gray-20, #f2f2f2);
+}
+
+main:has(.opp-hero-media) > .section.opp-tabs-container,
+main:has(.opp-hero-media) > .section.opp-accordion-container {
+  padding: var(--ff-section-spacing, 64px) 16px;
+}
+
+main:has(.opp-hero-media) > .section.opp-contact-container {
+  padding: var(--ff-section-spacing, 64px) 16px;
+  background: var(--ff-gray-20, #f2f2f2);
+}
+
+main:has(.opp-hero-media) > .section .default-content-wrapper,
+main:has(.opp-hero-media) > .section .opp-hero-wrapper,
+main:has(.opp-hero-media) > .section .opp-tabs-wrapper,
+main:has(.opp-hero-media) > .section .opp-accordion-wrapper,
+main:has(.opp-hero-media) > .section .opp-contact-wrapper {
+  width: 100%;
+  max-width: var(--ff-content-width, 1002px);
+  margin: 0 auto;
+  padding: 0;
+}
+
+main:has(.opp-hero-media) {
+  --ff-white: #fff;
+  --ff-purple: #4d148c;
+  --ff-purple-hover: #3e0d70;
+  --ff-orange: #ff6200;
+  --ff-orange-hover: #e45528;
+  --ff-blue: #007ab7;
+  --ff-ink: #333;
+  --ff-gray-80: #565656;
+  --ff-gray-70: #8e8e8e;
+  --ff-gray-30: #e3e3e3;
+  --ff-gray-20: #f2f2f2;
+  --ff-gray-10: #fafafa;
+  --ff-content-width: 1002px;
+  --ff-section-spacing: 64px;
+
+  max-width: none;
+  margin: 0;
+  color: var(--ff-ink);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+body:has(.opp-hero-media) main,
+body[class*="owneroperator"] main:has(.opp-hero-media) {
+  display: block;
+  max-width: none;
+  margin: 0;
+}
+
+main:has(.opp-hero-media) .opp-hero {
+  max-width: var(--ff-content-width);
+  margin: 0 auto;
+}
+
+main:has(.opp-hero-media) .opp-hero .opp-hero-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+  max-width: none;
+  padding: 0;
+}
+
+main:has(.opp-hero-media) .opp-hero .opp-hero-copy h1 {
+  margin: 0 0 16px;
+  color: var(--ff-ink);
+  font-family: Arial, sans-serif;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+main:has(.opp-hero-media) .opp-hero .opp-hero-lede p {
+  color: var(--ff-ink);
+  font-size: 16px;
+}
+
+main:has(.opp-hero-media) .opp-hero .opp-hero-sub p,
+main:has(.opp-hero-media) .opp-hero .opp-hero-divisions li {
+  color: var(--ff-gray-80);
+}
+
+main:has(.opp-hero-media) .opp-hero .opp-hero-divisions ul {
+  gap: 12px 24px;
+  border-color: var(--ff-gray-30);
+}
+
+main:has(.opp-hero-media) .opp-hero .opp-hero-divisions li strong {
+  color: var(--ff-purple);
+}
+
+main:has(.opp-hero-media) .opp-hero .opp-hero-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  aspect-ratio: 1.65;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+main:has(.opp-hero-media) .opp-hero .opp-hero-actions {
+  align-items: flex-start;
+  gap: 12px;
+}
+
+main:has(.opp-hero-media) .opp-hero .opp-hero-actions > p {
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+}
+
+main:has(.opp-hero-media) .opp-hero a.button:any-link,
+main:has(.opp-hero-media) .opp-contact a.button:any-link {
+  min-height: 52px;
+  padding: 12px 24px;
+  border-radius: 0;
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: normal;
+}
+
+main:has(.opp-hero-media) .opp-hero a.button.primary,
+main:has(.opp-hero-media) .opp-contact a.button.primary {
+  border-color: var(--ff-orange);
+  background: var(--ff-orange);
+  color: var(--ff-white);
+}
+
+main:has(.opp-hero-media) .opp-hero a.button.primary:hover,
+main:has(.opp-hero-media) .opp-hero a.button.primary:focus-visible,
+main:has(.opp-hero-media) .opp-contact a.button.primary:hover,
+main:has(.opp-hero-media) .opp-contact a.button.primary:focus-visible {
+  border-color: var(--ff-orange-hover);
+  background: var(--ff-orange-hover);
+  color: var(--ff-white);
+}
+
+main:has(.opp-hero-media) .opp-hero a.button.secondary,
+main:has(.opp-hero-media) .opp-contact a.button.secondary {
+  border: 2px solid var(--ff-blue);
+  border-radius: 50px;
+  background: transparent;
+  color: var(--ff-blue);
+  font-size: 14px;
+}
+
+main:has(.opp-hero-media) .opp-hero a.button.secondary:hover,
+main:has(.opp-hero-media) .opp-hero a.button.secondary:focus-visible,
+main:has(.opp-hero-media) .opp-contact a.button.secondary:hover,
+main:has(.opp-hero-media) .opp-contact a.button.secondary:focus-visible {
+  border-color: var(--ff-blue);
+  background: transparent;
+  color: var(--ff-blue);
+  text-decoration: underline;
+}
+
+main:has(.opp-hero-media) > .section .default-content-wrapper > h2 {
+  margin: 0 0 16px;
+  color: var(--ff-purple, #4d148c);
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+}
+
+main:has(.opp-hero-media) .opp-accordion-container .default-content-wrapper > p {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--ff-gray-80);
+}
+
+/* stylelint-enable no-descending-specificity */
+
+@media (width <= 900px) {
+  main:has(.opp-hero-media) {
+    --ff-section-spacing: 48px;
+  }
+
+  main:has(.opp-hero-media) .opp-hero .opp-hero-grid {
+    gap: 24px;
+  }
+
+  main:has(.opp-hero-media) .opp-hero .opp-hero-copy h1 {
+    font-size: 36px;
+  }
+}
+
+@media (width <= 640px) {
+  main:has(.opp-hero-media) {
+    --ff-section-spacing: 40px;
+  }
+
+  main:has(.opp-hero-media) > .section.opp-hero-container {
+    padding: 32px 16px;
+  }
+
+  main:has(.opp-hero-media) .opp-hero .opp-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  main:has(.opp-hero-media) .opp-hero .opp-hero-copy h1 {
+    font-size: 32px;
+  }
+
+  main:has(.opp-hero-media) .opp-hero .opp-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  main:has(.opp-hero-media) .opp-hero .opp-hero-actions > p,
+  main:has(.opp-hero-media) .opp-hero .opp-hero-actions a.button:any-link {
+    width: 100%;
+  }
+
+  main:has(.opp-hero-media) > .section .default-content-wrapper > h2 {
+    font-size: 32px;
+  }
+}
+
+/* Qualifications page: donor-aligned no-media hero and section framework. */
+/* stylelint-disable no-descending-specificity -- page-only reskin overrides shared block defaults. */
+main:has(.opp-hero-grid.opp-hero-nomedia) {
+  --ff-white: #fff;
+  --ff-purple: #4d148c;
+  --ff-purple-hover: #3e0d70;
+  --ff-orange: #ff6200;
+  --ff-orange-hover: #e45528;
+  --ff-blue: #007ab7;
+  --ff-ink: #333;
+  --ff-gray-80: #565656;
+  --ff-gray-30: #e3e3e3;
+  --ff-gray-20: #f2f2f2;
+  --ff-content-width: 1002px;
+  --ff-section-spacing: 64px;
+
+  max-width: none;
+  margin: 0;
+  color: var(--ff-ink);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+body:has(.opp-hero-grid.opp-hero-nomedia) main {
+  display: block;
+  max-width: none;
+  margin: 0;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) > .section {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) > .section:empty {
+  display: none;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) > .section.opp-hero-container {
+  padding: 40px 16px 48px;
+  background: var(--ff-gray-20);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) > .section.opp-tabs-container,
+main:has(.opp-hero-grid.opp-hero-nomedia) > .section.opp-contact-container {
+  padding: var(--ff-section-spacing) 16px;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) > .section.opp-contact-container {
+  background: var(--ff-gray-20);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) > .section .default-content-wrapper,
+main:has(.opp-hero-grid.opp-hero-nomedia) > .section .opp-hero-wrapper,
+main:has(.opp-hero-grid.opp-hero-nomedia) > .section .opp-tabs-wrapper,
+main:has(.opp-hero-grid.opp-hero-nomedia) > .section .opp-contact-wrapper {
+  width: 100%;
+  max-width: var(--ff-content-width);
+  margin: 0 auto;
+  padding: 0;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-grid.opp-hero-nomedia,
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-nomedia .opp-hero-copy {
+  width: 100%;
+  max-width: none;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-grid.opp-hero-nomedia {
+  padding: 0;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-copy h1 {
+  margin: 0 0 16px;
+  color: var(--ff-ink);
+  font-family: Arial, sans-serif;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-lede p,
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-sub p {
+  max-width: 900px;
+  color: var(--ff-ink);
+  font-size: 16px;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-list ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-list li {
+  min-width: 0;
+  padding: 16px 16px 16px 38px;
+  border: 1px solid var(--ff-gray-30);
+  background: var(--ff-white);
+  color: var(--ff-gray-80);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-list li::before {
+  left: 16px;
+  top: 22px;
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-actions {
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-actions > p {
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero a.button:any-link,
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-contact a.button:any-link {
+  min-height: 52px;
+  padding: 12px 24px;
+  border-radius: 0;
+  font-family: Arial, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: normal;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero a.button.primary,
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-contact a.button.primary {
+  border-color: var(--ff-orange);
+  background: var(--ff-orange);
+  color: var(--ff-white);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero a.button.primary:hover,
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero a.button.primary:focus-visible,
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-contact a.button.primary:hover,
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-contact a.button.primary:focus-visible {
+  border-color: var(--ff-orange-hover);
+  background: var(--ff-orange-hover);
+  color: var(--ff-white);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero a.button.secondary,
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-contact a.button.secondary {
+  border: 2px solid var(--ff-blue);
+  border-radius: 50px;
+  background: transparent;
+  color: var(--ff-blue);
+  font-size: 14px;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) > .section .default-content-wrapper > h2 {
+  margin: 0 0 16px;
+  color: var(--ff-purple);
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+}
+
+@media (width <= 900px) {
+  main:has(.opp-hero-grid.opp-hero-nomedia) {
+    --ff-section-spacing: 48px;
+  }
+}
+
+@media (width <= 640px) {
+  main:has(.opp-hero-grid.opp-hero-nomedia) {
+    --ff-section-spacing: 40px;
+  }
+
+  main:has(.opp-hero-grid.opp-hero-nomedia) > .section.opp-hero-container {
+    padding: 32px 16px;
+  }
+
+  main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-copy h1 {
+    font-size: 32px;
+  }
+
+  main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-list ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-actions > p,
+  main:has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-actions a.button:any-link {
+    width: 100%;
+  }
+
+  main:has(.opp-hero-grid.opp-hero-nomedia) > .section .default-content-wrapper > h2 {
+    font-size: 32px;
+  }
+}
+
+/* stylelint-enable no-descending-specificity */
