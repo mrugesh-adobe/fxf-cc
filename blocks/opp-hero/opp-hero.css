@@ -614,3 +614,16 @@ main:has(.opp-hero-grid.opp-hero-nomedia) > .section .default-content-wrapper > 
 }
 
 /* stylelint-enable no-descending-specificity */
+
+/* Combined pages (e.g. /all) that hold BOTH hero types. The two page-scoped
+   rule sets above each assume one hero type per page; where both are active
+   they collide. These rules only match a page containing both heroes, so the
+   single-hero pages (opportunities, qualifications-specifications) are
+   unaffected. */
+main:has(.opp-hero-media):has(.opp-hero-grid.opp-hero-nomedia) .opp-hero .opp-hero-grid.opp-hero-nomedia {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+main:has(.opp-hero-media):has(.opp-hero-grid.opp-hero-nomedia) > .section.opp-accordion-container {
+  padding: var(--ff-section-spacing, 64px) 16px;
+}
