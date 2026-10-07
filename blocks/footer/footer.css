@@ -190,3 +190,71 @@ footer .footer-copyright li:last-child {
     justify-content: flex-end;
   }
 }
+
+/* fixed disclosure badge */
+.footer .site-disclosure {
+  position: fixed;
+  z-index: 1000;
+  inset-inline-start: 50%;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-sizing: border-box;
+  max-width: calc(100vw - 24px);
+  padding: 9px 12px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: #000;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 35%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.footer .site-disclosure-label {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: #e60000;
+  color: #fff;
+  font-size: 0.9em;
+  line-height: 1;
+}
+
+.footer .site-disclosure a:any-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .site-disclosure a:hover {
+  text-decoration: underline;
+}
+
+.footer .site-disclosure a:focus-visible {
+  border-radius: 2px;
+  outline: 3px solid #ffb81c;
+  outline-offset: 3px;
+}
+
+/* ===== desktop ===== */
+@media (width >= 900px) {
+  /* align footer content with <main> (see --page-content-width in styles.css) */
+@@ -195,3 +243,15 @@ footer .footer-copyright li:last-child {
+    justify-content: flex-end;
+  }
+}
+
+@media (width < 600px) {
+  .footer .site-disclosure {
+    gap: 8px;
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .footer .site-disclosure-label {
+    padding: 7px 11px;
+  }
+}
