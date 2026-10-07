@@ -16,8 +16,8 @@
  * group whose cards hold no list stacks in one column. Authored nodes are
  * moved, never rebuilt.
  *
- * Variant `lead` (class="opp-tabs lead", CSS only): each panel's first
- * paragraph is styled as the panel's lead line (purple, medium weight).
+ * Variant `lead` (class="opp-tabs lead"): styles the panel introduction and
+ * groups following h3 sections into service cards without changing their copy.
  *
  * @param {Element} block
  */
@@ -85,7 +85,7 @@ export default function decorate(block) {
     tablist.append(button);
     labelCell.remove();
 
-    if (block.classList.contains('cards')) {
+    if (block.classList.contains('cards') || block.classList.contains('lead')) {
       const content = row.querySelector(':scope > div');
       if (content) groupCards(content);
     }

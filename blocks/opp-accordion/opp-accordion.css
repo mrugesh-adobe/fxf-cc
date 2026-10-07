@@ -87,3 +87,60 @@
     transition: none;
   }
 }
+
+/* FedEx Freight-style stacked FAQ rows on the opportunities page. */
+/* stylelint-disable no-descending-specificity -- open-state icon styling intentionally overrides the default row icon. */
+main:has(.opp-hero-media) .opp-accordion {
+  max-width: var(--ff-content-width, 1002px);
+  padding: 0;
+  border: 0;
+  border-top: 1px solid var(--ff-gray-30, #e3e3e3);
+  border-radius: 0;
+  background: var(--ff-white, #fff);
+}
+
+main:has(.opp-hero-media) .opp-accordion .opp-accordion-item {
+  border-bottom: 1px solid var(--ff-gray-30, #e3e3e3);
+}
+
+main:has(.opp-hero-media) .opp-accordion .opp-accordion-label {
+  min-height: 60px;
+  padding: 16px 4px;
+  color: var(--ff-ink, #333);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+main:has(.opp-hero-media) .opp-accordion .opp-accordion-label:hover {
+  color: var(--ff-purple, #4d148c);
+}
+
+main:has(.opp-hero-media) .opp-accordion .opp-accordion-icon::before,
+main:has(.opp-hero-media) .opp-accordion .opp-accordion-icon::after {
+  background: var(--ff-orange, #ff6200);
+}
+
+main:has(.opp-hero-media) .opp-accordion .opp-accordion-body {
+  padding: 0 40px 20px 4px;
+  color: var(--ff-gray-80, #565656);
+}
+
+main:has(.opp-hero-media) .opp-accordion .opp-accordion-body p,
+main:has(.opp-hero-media) .opp-accordion .opp-accordion-body ul {
+  color: var(--ff-gray-80, #565656);
+}
+
+@media (width <= 640px) {
+  main:has(.opp-hero-media) .opp-accordion .opp-accordion-label {
+    padding: 14px 2px;
+    font-size: 15px;
+  }
+
+  main:has(.opp-hero-media) .opp-accordion .opp-accordion-body {
+    padding-right: 26px;
+  }
+}
+
+/* stylelint-enable no-descending-specificity */

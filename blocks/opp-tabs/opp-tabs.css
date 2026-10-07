@@ -160,3 +160,268 @@
     font-size: 16px;
   }
 }
+
+/* The opportunities tabs use the service-card treatment from FedEx Freight. */
+/* stylelint-disable no-descending-specificity -- .lead and .cards are disjoint variants. */
+main:has(.opp-hero-media) .opp-tabs.lead {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--ff-white, #fff);
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-list {
+  gap: 0;
+  border-bottom: 1px solid var(--ff-gray-30, #e3e3e3);
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-tab {
+  flex: 1 1 0;
+  min-height: 56px;
+  margin: 0 0 -1px;
+  padding: 14px 20px;
+  border-bottom: 3px solid transparent;
+  color: var(--ff-gray-80, #565656);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-tab:hover,
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-tab[aria-selected="true"] {
+  color: var(--ff-purple, #4d148c);
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-tab[aria-selected="true"] {
+  border-bottom-color: var(--ff-purple, #4d148c);
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-panel {
+  padding: 24px 0 0;
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-panel > div {
+  max-width: none;
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-panel > div > p:first-child {
+  margin: 0 0 16px;
+  color: var(--ff-ink, #333);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-panel > div > p:nth-child(2) {
+  margin: 0 0 24px;
+  color: var(--ff-gray-80, #565656);
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0 0;
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-cards.stack {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--ff-gray-30, #e3e3e3);
+  border-radius: 0;
+  background: var(--ff-white, #fff);
+  box-shadow: none;
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-card h3 {
+  margin: 0 0 12px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid var(--ff-gray-30, #e3e3e3);
+  color: var(--ff-purple, #4d148c);
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.33;
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-card p {
+  margin: 0;
+  color: var(--ff-gray-80, #565656);
+}
+
+main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-panel ul {
+  padding-left: 20px;
+  color: var(--ff-gray-80, #565656);
+}
+
+@media (width <= 640px) {
+  main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-tab {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+
+  main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-cards,
+  main:has(.opp-hero-media) .opp-tabs.lead .opp-tabs-cards.stack {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* stylelint-enable no-descending-specificity */
+
+/* Qualifications and Specifications use the donor's service-card vocabulary. */
+/* stylelint-disable no-descending-specificity -- cards variant styling is page-specific. */
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--ff-white, #fff);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-list {
+  gap: 0;
+  border-bottom: 1px solid var(--ff-gray-30, #e3e3e3);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-tab {
+  flex: 1 1 0;
+  min-height: 56px;
+  margin: 0 0 -1px;
+  padding: 14px 20px;
+  border-bottom: 3px solid transparent;
+  color: var(--ff-gray-80, #565656);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-tab:hover,
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-tab[aria-selected="true"] {
+  color: var(--ff-purple, #4d148c);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-tab[aria-selected="true"] {
+  border-bottom-color: var(--ff-purple, #4d148c);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-panel {
+  padding: 24px 0 0;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-panel > div {
+  max-width: none;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-panel h2 {
+  margin: 32px 0 16px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid var(--ff-gray-30, #e3e3e3);
+  color: var(--ff-purple, #4d148c);
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.33;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-panel h2 em {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 3px 10px;
+  border: 1px solid var(--ff-gray-30, #e3e3e3);
+  border-radius: 100px;
+  background: var(--ff-gray-10, #fafafa);
+  color: var(--ff-gray-80, #565656);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-panel > div > ul {
+  margin: 8px 0 20px;
+  padding: 16px 20px 16px 40px;
+  border-left: 3px solid var(--ff-orange, #ff6200);
+  background: var(--ff-gray-10, #fafafa);
+  color: var(--ff-gray-80, #565656);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-panel > div > ul li {
+  margin: 4px 0;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-panel > div > p {
+  margin: 16px 0 8px;
+  color: var(--ff-gray-80, #565656);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-cards,
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-cards.stack {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--ff-gray-30, #e3e3e3);
+  border-radius: 0;
+  background: var(--ff-white, #fff);
+  box-shadow: none;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-card.wide {
+  grid-column: 1 / -1;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-card h3 {
+  margin: 0 0 12px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid var(--ff-gray-30, #e3e3e3);
+  color: var(--ff-purple, #4d148c);
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.33;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-card p {
+  margin: 12px 0;
+  color: var(--ff-gray-80, #565656);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-card ul {
+  margin: 8px 0 16px;
+  padding-left: 20px;
+  color: var(--ff-gray-80, #565656);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-card li {
+  margin: 4px 0;
+}
+
+@media (width <= 640px) {
+  main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-tab {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+
+  main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-panel h2 {
+    font-size: 21px;
+  }
+
+  main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-panel h2 em {
+    margin: 6px 0 0;
+  }
+
+  main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-cards,
+  main:has(.opp-hero-grid.opp-hero-nomedia) .opp-tabs.cards .opp-tabs-cards.stack {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* stylelint-enable no-descending-specificity */

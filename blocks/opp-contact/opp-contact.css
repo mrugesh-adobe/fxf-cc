@@ -126,3 +126,111 @@
     justify-content: flex-start;
   }
 }
+
+/* Contact and Extranet actions follow the donor's utility-card treatment. */
+main:has(.opp-hero-media) .opp-contact-container .opp-contact-wrapper > .opp-contact {
+  padding: 28px;
+  border: 1px solid var(--ff-gray-30, #e3e3e3);
+  border-radius: 0;
+  background: var(--ff-white, #fff);
+  color: var(--ff-ink, #333);
+}
+
+main:has(.opp-hero-media) .opp-contact .opp-contact-grid {
+  grid-template-columns: minmax(190px, 0.75fr) minmax(0, 1.25fr);
+  gap: 24px 32px;
+}
+
+main:has(.opp-hero-media) .opp-contact .opp-contact-phone-group,
+main:has(.opp-hero-media) .opp-contact .opp-contact-phone-group p {
+  color: var(--ff-gray-80, #565656);
+  font-size: 14px;
+}
+
+main:has(.opp-hero-media) .opp-contact a.opp-contact-phone {
+  color: var(--ff-purple, #4d148c);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+main:has(.opp-hero-media) .opp-contact a.opp-contact-phone:hover,
+main:has(.opp-hero-media) .opp-contact a.opp-contact-phone:focus-visible {
+  color: var(--ff-purple-hover, #3e0d70);
+}
+
+main:has(.opp-hero-media) .opp-contact .opp-contact-actions {
+  justify-content: flex-start;
+}
+
+main:has(.opp-hero-media) .opp-contact .opp-contact-actions > p:not(.button-wrapper) {
+  flex: 1 0 100%;
+  margin: 8px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--ff-gray-30, #e3e3e3);
+  color: var(--ff-gray-80, #565656);
+}
+
+main:has(.opp-hero-media) .opp-contact .opp-contact-actions > p:not(.button-wrapper) a:any-link {
+  color: var(--ff-blue, #007ab7);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+main:has(.opp-hero-media) .opp-contact .opp-contact-actions > p:not(.button-wrapper) a:hover {
+  color: var(--ff-purple, #4d148c);
+}
+
+@media (width <= 640px) {
+  main:has(.opp-hero-media) .opp-contact-container .opp-contact-wrapper > .opp-contact {
+    padding: 20px;
+  }
+
+  main:has(.opp-hero-media) .opp-contact .opp-contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Qualifications page contact links use the donor's utility-card treatment. */
+/* stylelint-disable no-descending-specificity -- page-only block treatment. */
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-contact-container .opp-contact-wrapper > .opp-contact {
+  padding: 28px;
+  border: 1px solid var(--ff-gray-30, #e3e3e3);
+  border-radius: 0;
+  background: var(--ff-white, #fff);
+  color: var(--ff-ink, #333);
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-contact .opp-contact-grid {
+  grid-template-columns: minmax(190px, 0.75fr) minmax(0, 1.25fr);
+  gap: 24px 32px;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-contact .opp-contact-phone-group,
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-contact .opp-contact-phone-group p {
+  color: var(--ff-gray-80, #565656);
+  font-size: 14px;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-contact a.opp-contact-phone {
+  color: var(--ff-purple, #4d148c);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+main:has(.opp-hero-grid.opp-hero-nomedia) .opp-contact .opp-contact-actions {
+  justify-content: flex-start;
+}
+
+@media (width <= 640px) {
+  main:has(.opp-hero-grid.opp-hero-nomedia) .opp-contact-container .opp-contact-wrapper > .opp-contact {
+    padding: 20px;
+  }
+
+  main:has(.opp-hero-grid.opp-hero-nomedia) .opp-contact .opp-contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+}
+
+/* stylelint-enable no-descending-specificity */
