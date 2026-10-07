@@ -1,15 +1,17 @@
-# FedEx Custom Critical
+# Custom Critical Demo Website
 
-This repository contains the site code for the FedEx Custom Critical AEM Edge Delivery Services (EDS) website. Page content is authored separately in Document Authoring (DA) at [da.live](https://da.live/).
+> **Demo website:** This project is for demonstration purposes only. It is not an official company website.
+
+This repository contains the site code for the Custom Critical AEM Edge Delivery Services (EDS) demo website. Page content is authored separately in Document Authoring (DA) at [da.live](https://da.live/).
 
 ## Site URLs
 
 | Environment | URL | Purpose |
 | --- | --- | --- |
-| Main preview | [main--fxf-customcritical--mrugesh-adobe.aem.page](https://main--fxf-customcritical--mrugesh-adobe.aem.page/) | Preview using code from `main` |
-| Main live | [main--fxf-customcritical--mrugesh-adobe.aem.live](https://main--fxf-customcritical--mrugesh-adobe.aem.live/) | Published site using code from `main` |
-| FF preview | [ff--fxf-customcritical--mrugesh-adobe.aem.page](https://ff--fxf-customcritical--mrugesh-adobe.aem.page/) | Preview using code from the `ff` branch |
-| DA authoring | [da.live](https://da.live/#/mrugesh-adobe/fxf-customcritical) | Create and edit site content |
+| Main preview | [main--fxf-cc--mrugesh-adobe.aem.page](https://main--fxf-cc--mrugesh-adobe.aem.page/) | Preview using code from `main` |
+| Main live | [main--fxf-cc--mrugesh-adobe.aem.live](https://main--fxf-cc--mrugesh-adobe.aem.live/) | Published site using code from `main` |
+| FF preview | [ff--fxf-cc--mrugesh-adobe.aem.page](https://ff--fxf-cc--mrugesh-adobe.aem.page/) | Preview using code from the `ff` branch |
+| DA authoring | [da.live](https://da.live/#/mrugesh-adobe/fxf-cc) | Create and edit site content |
 
 Code and content deploy separately: merging code to `main` updates the site code, while authors preview and publish content from DA.
 
@@ -40,7 +42,7 @@ npm run lint
 
 ## Authoring content
 
-Authors create and edit pages in [DA](https://da.live/#/mrugesh-adobe/fxf-customcritical), not in this code repository. Use the [AEM Sidekick Chrome extension](https://chromewebstore.google.com/detail/aem-sidekick/igkmdomcgoebiipaifhmpfjhbjccggml) to preview and publish DA content, and to access authoring actions from preview pages. After editing content in DA, select **Preview** in Sidekick to review it; publish when it is ready.
+Authors create and edit pages in [DA](https://da.live/#/mrugesh-adobe/fxf-cc), not in this code repository. Use the [AEM Sidekick Chrome extension](https://chromewebstore.google.com/detail/aem-sidekick/igkmdomcgoebiipaifhmpfjhbjccggml) to preview and publish DA content, and to access authoring actions from preview pages. After editing content in DA, select **Preview** in Sidekick to review it; publish when it is ready.
 
 For the full walkthrough, see Adobe's [AEM Edge Delivery Services developer tutorial](https://www.aem.live/developer/tutorial) and [Sidekick documentation](https://www.aem.live/docs/sidekick).
 
