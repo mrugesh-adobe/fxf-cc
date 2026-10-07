@@ -42,4 +42,19 @@ export default async function decorate(block) {
   }
 
   block.append(footer);
+
+  const disclosure = document.createElement('aside');
+  disclosure.className = 'site-disclosure';
+  disclosure.setAttribute('aria-label', 'Website disclosure');
+
+  const badge = document.createElement('span');
+  badge.className = 'site-disclosure-label';
+  badge.textContent = 'DEMO';
+
+  const link = document.createElement('a');
+  link.href = 'https://www.fedexfreight.com/en-us';
+  link.textContent = 'Not a FedExFreight website';
+
+  disclosure.append(badge, link);
+  block.append(disclosure);
 }
