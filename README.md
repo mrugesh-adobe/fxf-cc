@@ -1,6 +1,8 @@
-# FedEx Custom Critical
+# Custom Critical Demo Website
 
-This repository contains the site code for the FedEx Custom Critical AEM Edge Delivery Services (EDS) website. Page content is authored separately in Document Authoring (DA) at [da.live](https://da.live/).
+> **Demo website:** This project is for demonstration purposes only. It is not an official company website.
+
+This repository contains the site code for the Custom Critical AEM Edge Delivery Services (EDS) demo website. Page content is authored separately in Document Authoring (DA) at [da.live](https://da.live/).
 
 ## Site URLs
 
